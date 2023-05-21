@@ -6,21 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="adminStyle.css">
 </head>
 
 <body>
-    <link rel="stylesheet" href="adminStyle.css">
-    <script src="adminJS.js"></script>
-
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="#">
                 <h1>Create Account</h1>
-                <span>or use your email for registration</span>
                 <input type="text" placeholder="Name" />
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
+                <button id="signup-button">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
@@ -29,7 +26,7 @@
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button id="signin-button">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -48,4 +45,5 @@
         </div>
     </div>
 </body>
+<script src="adminJS.js"></script>
 </html>
