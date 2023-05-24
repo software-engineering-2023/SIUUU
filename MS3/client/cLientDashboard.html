@@ -11,124 +11,160 @@
     <link rel="stylesheet" href="ClientCSS.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-custom bg-body-tertiary ">
-        <div class="container-fluid" style="padding-left:0">
-            <img src="logo.png" class="img-fluid" alt="Responsive image" width="200" height="100">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav d-flex  align-items-center me-auto mb-2 mb-lg-0 w-100">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
+<body id="dashboard">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-custom bg-body-tertiary" style="padding: 1rem;">
+            <div class="container-fluid" style="padding-left:0">
+                <img src="logo.png" class="img-fluid" alt="Responsive image" width="150" height="auto">
+                <a class="navbar-brand" href="#">German National Bank</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex  align-items-center me-auto mb-2 mb-lg-0 w-100">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <input class="form-control me-2 d-inline" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-custom" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row w-100" id="mainView">
+        <div class="col-2">
+            <div class="d-flex flex-column h-100 flex-shrink-0 p-3 sidebar justify-content-center">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                </a>
+                <ul class="nav nav-pills flex-column mb-auto justify-content" style="margin-top: 0;">
+                    <li>
+                        <a href="#" class="nav-link link-dark" id="homeButton">
+                            Home
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
                     </li>
-                    <li class="nav-item ml-auto">
-                        <div class="row align-items-center">
-                            <div class="col-8">
-                                <input class="form-control me-2 d-inline" type="search" placeholder="Search"
-                                    aria-label="Search">
-                            </div>
-                            <div class="col-3">
-                                <button class="btn btn-custom" type="submit">Search</button>
-                            </div>
-                        </div>
+                    <li>
+                        <a href="#" class="nav-link link-dark" id="creditCardButton">
+                            Manage Credit Cards
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark" id="loanButton">
+                            Manage Loans
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark" id="transactionButton">
+                            View Transactions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark" id="billsButton">
+                            View Bills
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark" id="transferButton">
+                            Bank Transfer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark" id="cashBackButton">
+                            Cash Back Points
+                        </a>
                     </li>
                 </ul>
+                <div class="dropdown" style="padding-bottom: 4rem;">
+                    <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                        id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="User.png" alt="" width="50" height="50" class="rounded-circle me-2" style="">
+                        <strong style="padding: auto;">(Useraname)</strong>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <div class="d-flex flex-column flex-shrink-0 p-3 sidebar">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <!-- <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#bootstrap"></use>
-            </svg> -->
-        </a>
-        <ul class="nav nav-pills flex-column mb-auto justify-content" style="margin-top: 0;">
-            <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#home"></use>
-                    </svg>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#speedometer2"></use>
-                    </svg>
-                    Dashboard
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#table"></use>
-                    </svg>
-                    Orders
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#grid"></use>
-                    </svg>
-                    Products
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#people-circle"></use>
-                    </svg>
-                    Customers
-                </a>
-            </li>
-        </ul>
-        <hr>
+        <div class="col justify-content-start" id="home">
+            <div class="row">
+                <div class="col p-6" style="margin-top:-80px;">
+                    <h1 class="text-center">Welcome to the German National Bank</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 p-2" style="margin-bottom:50px ;">
+                    <h2 class="text-left">Here is Your Account details:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-left">Account Number: (AccountNumber)</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-left">Balance: (Balance)</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-left">Account Type: (AccountType)</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-left">Account Status: (AccountStatus)</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-left">Account Creation Date: (AccountCreationDate)</h3>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
-    <div id="clientContainer">
-        <h1>Main Content</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
 
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 </body>
 <script src="ClientJS.js"></script>
 
