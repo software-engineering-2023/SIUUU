@@ -545,15 +545,15 @@ thead th span.icon-arrow {
 }
 
 thead th:hover span.icon-arrow{
-    border: 1.4px solid #6c00bd;
+    border: 1.4px solid #FF4A3B;
 }
 
 thead th:hover {
-    color: #6c00bd;
+    color: #FF4A3B;
 }
 
 thead th.active span.icon-arrow{
-    background-color: #6c00bd;
+    background-color: #FF4A3B;
     color: #fff;
 }
 
@@ -562,7 +562,7 @@ thead th.asc span.icon-arrow{
 }
 
 thead th.active,tbody td.active {
-    color: #6c00bd;
+    color: #FF4A3B;
 }
 
 .right {
