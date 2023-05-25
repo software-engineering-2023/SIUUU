@@ -214,6 +214,103 @@
         </div>
     </div>
 
+    <div id="loan" style="display: none">
+        <section class="container-loan">
+            <h3>Loan Application Form</h3>
+            <form action="#" class="form">
+                <div class="select-box">
+                    <select>
+                      <option hidden>Loan Type</option>
+                      <option>Car Loan</option>
+                      <option>Personal Loan</option>
+                    </select>
+                </div>
+                <br>
+              <label>Personal Information</label>
+              <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter full name" required />
+              </div>
+              <div class="input-box">
+                <label>Email Address</label>
+                <input type="text" placeholder="Enter email address" required />
+              </div>
+              <div class="column">
+                <div class="input-box">
+                  <label>Phone Number</label>
+                  <input type="number" placeholder="Enter phone number" required />
+                </div>
+                <div class="input-box">
+                  <label>Birth Date</label>
+                  <input type="date" placeholder="Enter birth date" required />
+                </div>
+              </div>
+              <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="gender-option">
+                  <div class="gender">
+                    <input type="radio" id="check-male" name="gender" checked />
+                    <label for="check-male">male</label>
+                  </div>
+                  <div class="gender">
+                    <input type="radio" id="check-female" name="gender" />
+                    <label for="check-female">Female</label>
+                  </div>
+                  <div class="gender">
+                    <input type="radio" id="check-other" name="gender" />
+                    <label for="check-other">prefer not to say</label>
+                  </div>
+                </div>
+              </div>
+              <div class="input-box address">
+                <label>Address</label>
+                <input type="text" placeholder="Enter street address" required />
+                <input type="text" placeholder="Enter street address line 2" required />
+                <div class="column">
+                  <div class="select-box">
+                    <select>
+                      <option hidden>Country</option>
+                      <option>Egypt</option>
+                      <option>Germany</option>
+                    </select>
+                  </div>
+                  <input type="text" placeholder="Enter your city" required />
+                </div>
+                <div class="column">
+                  <input type="text" placeholder="Enter your region" required />
+                  <input type="number" placeholder="Enter postal code" required />
+                </div>
+              </div>
+              <br>
+              <label> Credit Card Details</label>
+              <div class="input-box">
+                <label>Name on Card</label>
+                <input type="text" placeholder="Enter name as on card" required />
+              </div>
+              <div class="column">
+                <div class="input-box">
+                <label>Card Number</label>
+                <input type="number" placeholder="Enter card number" required />
+              </div>
+                <div class="input-box">
+                  <label>CSV</label>
+                  <input type="number" placeholder="Enter CSV" required />
+                </div>
+                
+              </div>
+              <div class="input-box">
+                  <label>Expiry Date</label>
+                  <input type="date" placeholder="Enter expiry date" required />
+              </div>
+              <br>
+              <div class="input-box">
+                <label>Reason</label>
+                <input type="text" placeholder="Enter the reason for loan application" required />
+            </div>
+              <button>Submit</button>
+            </form>
+          </section>
+    </div>
 
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
