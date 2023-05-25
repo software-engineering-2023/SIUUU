@@ -18,7 +18,9 @@
 
 h1 {
 	font-weight: bold;
-	margin: 0;
+	margin: 100px;
+	
+
 }
 
 h2 {
@@ -262,6 +264,7 @@ footer a {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: 0;
+	
 }
 
 .navbar-custom {
@@ -273,6 +276,7 @@ footer a {
 	left: 0;
 	padding: 0;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	z-index: 99999;
 }
 
 .navbar-custom .navbar-brand {
@@ -325,11 +329,4 @@ footer a {
 	margin-left: 2rem;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
 
