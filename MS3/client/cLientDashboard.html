@@ -12,68 +12,67 @@
 </head>
 
 <body id="dashboard">
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-custom bg-body-tertiary" style="padding: 1rem;">
-            <div class="container-fluid" style="padding-left:0">
-                <img src="logo.png" class="img-fluid" alt="Responsive image" width="150" height="auto">
-                <a class="navbar-brand" href="#">German National Bank</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav d-flex  align-items-center me-auto mb-2 mb-lg-0 w-100">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item ml-auto">
-                            <div class="row align-items-center">
-                                <div class="col-8">
-                                    <input class="form-control me-2 d-inline" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-custom" type="submit">Search</button>
-                                </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-custom bg-body-tertiary mb-5" style="padding: 1rem;">
+        <div class="container-fluid" style="padding-left:0">
+            <img src="logo.png" class="img-fluid" alt="Responsive image" width="150" height="auto">
+            <a class="navbar-brand" href="#">German National Bank</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex  align-items-center me-auto mb-2 mb-lg-0 w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ml-auto">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <input class="form-control me-2 d-inline" type="search" placeholder="Search"
+                                    aria-label="Search">
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="col-3">
+                                <button class="btn btn-custom" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
-    <div class="row w-100" id="mainView">
+    <div class="row w-100 " id="mainView">
         <div class="col-2">
             <div class="d-flex flex-column h-100 flex-shrink-0 p-3 sidebar justify-content-center">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 </a>
                 <ul class="nav nav-pills flex-column mb-auto justify-content" style="margin-top: 0;">
                     <li>
-                        <a href="#" class="nav-link link-dark" id="homeButton"style="text-decoration: underline;" >
+                        <a href="#" class="nav-link link-dark" id="homeButton" style="text-decoration: underline;">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link link-dark" id="creditCardButton" style="text-decoration: underline;">
+                        <a href="#" class="nav-link link-dark" id="creditCardButton"
+                            style="text-decoration: underline;">
                             Manage Credit Cards
                         </a>
                     </li>
@@ -83,7 +82,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link link-dark" id="transactionButton" style="text-decoration: underline;">
+                        <a href="#" class="nav-link link-dark" id="transactionButton"
+                            style="text-decoration: underline;">
                             View Transactions
                         </a>
                     </li>
@@ -106,12 +106,12 @@
                 <div class="dropdown" style="padding-bottom: 4rem;">
                     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
                         id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="User.png" alt="" width="50" height="50" class="rounded-circle me-2" >
+                        <img src="User.png" alt="" width="50" height="50" class="rounded-circle me-2">
                         <strong style="padding: auto;">&nbsp;(Useraname)</strong>
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                         <li><a class="dropdown-item" href="#">Settings</a></li>
-                        
+
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
@@ -123,13 +123,13 @@
         </div>
         <div class="col justify-content-start" id="home">
             <div class="row">
-                <div class="col p-6" style="margin-top:-80px;">
+                <div class="col p-6">
                     <h1 class="text-center">Welcome to the German National Bank</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 p-2" style="margin-bottom:50px ;">
-                    <h2 class="text-left" style="text-decoration: underline;">Here is Your Account details:</h2>
+                <div class="col-12 p-2" style="margin-bottom:5px ;">
+                    <h2 class="text-left" style="font-weight: 600;">Here is Your Account details:</h2>
                 </div>
             </div>
             <div class="row">
@@ -160,120 +160,57 @@
         </div>
         <div class="col justify-content-start" id="creditCard" style="display: none;">
             <div class="row">
-                <div class="col p-6" style="margin-top:-80px;">
-                    <h1 class="text-center">Manage Credit Cards</h1>
+                <div class="col p-6 text-center">
+                    <h1>Manage Credit Cards</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 p-2" style="margin-bottom:50px ;">
-                    <h2 class="text-left" style="text-decoration: underline;">Here are Your Credit Card Details:</h2>
+                <div class="col-12 p-2 mb-30">
+                    <h2 class="text-left" style="text-decoration: underline;">Here is Your Credit Card Details:</h2>
                 </div>
             </div>
-            <div style="border: 2px solid #000; padding: 10px; background-color: #2B5434;font-weight: bold;" >
-                <h3 style="font-weight: bold;">Credit Card Details</h3>                <ul>
-                    <li>Card Type: Visa</li>
-                    <li>Card Number: 1212 1212 1212 1212</li>
-                    <li>Expiration Date: 12/24</li>
-                    <li>Cardholder Name: Amr </li>
-                </ul>
+            <div id="CCDetails">
+                <div class="card-container">
+                    <h3>Credit Card Details</h3>
+                    <ul>
+                        <li>Card Type: Visa</li>
+                        <li>Card Number: 1212 1212 1212 1212</li>
+                        <li>Expiration Date: 12/24</li>
+                        <li>Cardholder Name: Amr </li>
+                    </ul>
+                </div>
+                <div class="card-container">
+                    <h3>Credit Card Details</h3>
+                    <ul>
+                        <li>Card Type: Visa</li>
+                        <li>Card Number: 1234 4321 1234 4321</li>
+                        <li>Expiration Date: 12/25</li>
+                        <li>Cardholder Name: Amr</li>
+                    </ul>
+                </div>
             </div>
-            <div style="border: 2px solid #000; padding: 10px; background-color: #2B5434 ; font-weight: bold; " >
-                <h3 style="font-weight: bold;">Credit Card Details</h3>            
-                <ul>
-                    <li>Card Type: Visa</li>
-                    <li>Card Number: 1234 4321 1234 4321</li>
-                    <li>Expiration Date: 12/25</li>
-                    <li>Cardholder Name: Amr</li>
-                </ul>
-            </div>
-            <style>
-                #creditCardForm {
-                  border: 1px solid #000000;
-                  padding: 20px;
-                  border-radius: 5px;
-                }
-              </style>
-                 <form id="creditCardForm">
-                    <h1 style="text-decoration: underline;">Credit Card Application</h1>
+            <div class="row">
+                <div class="col p-6 d-flex justify-content-center">
+                    <button id="applyCreditCard" class="btn-lg p-1 m-5" >Apply for a new Credit Card?</h2>
+                </div>
+            <form id="creditCardForm" style="display: none;">
+                <h1 style="text-decoration: underline;">Credit Card Application</h1>
                 <label for="name">Please Enter Your Full Name:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="name">Please Enter Your Age:</label>
                 <input type="text" id="age" age="age" required>
-                <style>
-                    .card-type label {
-                      display: inline-block;
-                      margin-right: 10px;
-                    }
-                  </style>
-                    
-                    <div class="card-type">
-                      <label>
+                <div class="card-type">
+                    <label>
                         <input type="radio" name="cardType" value="debit" required>
                         Debit
-                      </label>
-                  
-                      <label>
+                    </label>
+                    <label>
                         <input type="radio" name="cardType" value="credit" required>
                         Credit
-                      </label>   
-                    </div>
-                      <button type="submit">Submit</button>           
-              </form>
-              
-           
-        </div>
-        <div class="col justify-content-start" id="transaction" style="display:none">
-            <div class="row">
-                <div class="col p-6" style="margin-top:-80px;">
-                    <h1 class="text-center">View Transactions</h1>
+                    </label>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12 p-2" style="margin-bottom:50px ;">
-                    <h2 class="text-left" style="text-decoration: underline;">Here are Your Transactions:</h2>
-                </div>
-            </div>  
-               <table>
-                <tr>
-                <td class="first-cell" style="font-weight: bold;">Transaction ID</td>
-                  <td style="font-weight: bold;" >Merchant Name</td>
-                  <td style="font-weight: bold;">Date</td>
-                  <td style="font-weight: bold;">Amount</td>
-                </tr>
-                <tr>
-                <td class="first-cell">20574</td>
-                  <td>McDonalds</td>
-                  <td>24/5/2023</td>
-                  <td>250 EGP</td>
-                </tr>
-                <tr>
-                 <td class="first-cell">21475</td>
-                  <td>Starbucks</td>
-                  <td>22/5/2023</td>
-                  <td>95 EGP</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">15786</td>
-                      <td>Circle K</td>
-                      <td>19/5/2023</td>
-                      <td>40 EGP</td>
-                </tr>
-                 <tr>
-                    <td class="first-cell">18986</td>
-                      <td>Zara</td>
-                      <td>11/5/2023</td>
-                      <td>4350 EGP</td>
-              </tr>
-                <tr>
-                    <td class="first-cell">54786</td>
-                      <td>KFC</td>
-                      <td>8/5/2023</td>
-                      <td>225 EGP</td>
-                </tr>
-
-                
-              </table>
-            
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
 

@@ -26,6 +26,9 @@ const transfer = document.getElementById('transfer');
 const cashBackButton = document.getElementById('cashBackButton');
 const cashBack = document.getElementById('cashBack');
 
+const applyCreditCard = document.getElementById('applyCreditCard');
+const creditCardForm = document.getElementById('creditCardForm');
+
 let activeDiv = "home";
 
 
@@ -101,6 +104,14 @@ if (cashBackButton && mainView && home) {
     })
 }
 
+if (applyCreditCard && mainView && home) {
+
+    applyCreditCard.addEventListener('click', function () {
+        console.log("hello9");
+        creditCardForm.style.display = "block";
+        applyCreditCard.style.display = "none";
+    })
+}
 
 function setActiveDiv(divId) {
     if (divId !== activeDiv) {
