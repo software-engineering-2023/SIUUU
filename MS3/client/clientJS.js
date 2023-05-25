@@ -120,3 +120,12 @@ function setActiveDiv(divId) {
         activeDiv = divId; // Update the active div variable
     }
 }
+let popup1=document.getElementById("popup1"); //notification popup
+
+        function openPopup1(){
+            popup1.classList.add("open-popup");
+        }
+        function closePopup1(){
+            popup1.classList.remove("open-popup");
+        }
+        

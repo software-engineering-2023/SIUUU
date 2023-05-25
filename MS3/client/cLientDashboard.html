@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>German National Bank</title>
+    <title>GNB</title>
+    <link rel="shortcut icon" type="image" href="logo2.png" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="ClientCSS.css">
@@ -215,8 +216,8 @@
     </div>
 
     <div id="loan" style="display: none">
-        <section class="container-loan">
-            <h3>Loan Application Form</h3>
+        <h1>Loan Application Form</h1>
+        <section class="container-loan"> 
             <form action="#" class="form">
                 <div class="select-box">
                     <select>
@@ -230,6 +231,10 @@
               <div class="input-box">
                 <label>Full Name</label>
                 <input type="text" placeholder="Enter full name" required />
+              </div>
+              <div class="input-box">
+                <label>National ID</label>
+                <input type="text" placeholder="Enter national ID" required />
               </div>
               <div class="input-box">
                 <label>Email Address</label>
@@ -303,12 +308,37 @@
                   <input type="date" placeholder="Enter expiry date" required />
               </div>
               <br>
-              <div class="input-box">
+            <div class="input-box">
                 <label>Reason</label>
                 <input type="text" placeholder="Enter the reason for loan application" required />
             </div>
-              <button>Submit</button>
-            </form>
+            <div class="gender-box">
+                <h3>Payment Plan</h3>
+                <div class="gender-option">
+                  <div class="gender">
+                    <input type="radio" id="check-standard" name="gender" checked />
+                    <label for="check-standard">Standard Repayment</label>
+                  </div>
+                  <div class="gender">
+                    <input type="radio" id="check-extended" name="gender" />
+                    <label for="check-extended">Extended Repayment</label>
+                  </div>
+                  <div class="gender">
+                    <input type="radio" id="check-graduated" name="gender" />
+                    <label for="check-graduated">Graduated Repayment</label>
+                  </div>
+                </div>
+              </div>
+              
+              <button onclick="openPopup1()">Submit</button>
+              
+            </form><div class="popup" id="popup1">
+                <img src="tick.png" >
+                <h2>Thank you!</h2>
+                <p>Loan Application sent successfully!</p>  
+                <button type="button" onclick="closePopup1()">OK</button>  
+            
+            </div>
           </section>
     </div>
 
