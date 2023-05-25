@@ -192,26 +192,77 @@
             </div>
             <div class="row">
                 <div class="col p-6 d-flex justify-content-center">
-                    <button id="applyCreditCard" class="btn-lg p-1 m-5" >Apply for a new Credit Card?</h2>
+                    <button id="applyCreditCard" class="btn-lg p-1 m-5">Apply for a new Credit Card?</h2>
                 </div>
-            <form id="creditCardForm" style="display: none;">
-                <h1 style="text-decoration: underline;">Credit Card Application</h1>
-                <label for="name">Please Enter Your Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="name">Please Enter Your Age:</label>
-                <input type="text" id="age" age="age" required>
-                <div class="card-type">
-                    <label>
-                        <input type="radio" name="cardType" value="debit" required>
-                        Debit
-                    </label>
-                    <label>
-                        <input type="radio" name="cardType" value="credit" required>
-                        Credit
-                    </label>
+                <form id="creditCardForm" style="display: none;">
+                    <h1 style="text-decoration: underline;">Credit Card Application</h1>
+                    <label for="name">Please Enter Your Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Please Enter Your Age:</label>
+                    <input type="text" id="age" age="age" required>
+                    <div class="card-type">
+                        <label>
+                            <input type="radio" name="cardType" value="debit" required>
+                            Debit
+                        </label>
+                        <label>
+                            <input type="radio" name="cardType" value="credit" required>
+                            Credit
+                        </label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="col justify-content-start" id="transaction" style="display:none">
+            <div class="row">
+                <div class="col p-6" >
+                    <h1 class="text-center">View Transactions</h1>
                 </div>
-                <button type="submit">Submit</button>
-            </form>
+                <div class="row">
+                    <div class="col-12 p-2" style="margin-bottom:50px ;">
+                        <h2 class="text-left" style="text-decoration: underline;">Here are Your Transactions:</h2>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="first-cell" style="font-weight: bold;">Transaction ID</td>
+                        <td style="font-weight: bold;">Merchant Name</td>
+                        <td style="font-weight: bold;">Date</td>
+                        <td style="font-weight: bold;">Amount</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">20574</td>
+                        <td>McDonalds</td>
+                        <td>24/5/2023</td>
+                        <td>250 EGP</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">21475</td>
+                        <td>Starbucks</td>
+                        <td>22/5/2023</td>
+                        <td>95 EGP</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">15786</td>
+                        <td>Circle K</td>
+                        <td>19/5/2023</td>
+                        <td>40 EGP</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">18986</td>
+                        <td>Zara</td>
+                        <td>11/5/2023</td>
+                        <td>4350 EGP</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">54786</td>
+                        <td>KFC</td>
+                        <td>8/5/2023</td>
+                        <td>225 EGP</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     <div class="col justify-content-start" id="transaction" style="display:none">
