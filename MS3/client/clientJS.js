@@ -225,7 +225,7 @@ const country= document.getElementById('country');
                 setError(nationalID, 'National ID is required');
                 isFormValid = false;
             } else if (nationalIDValue.length < 16 ) {
-                setError(nationalID, 'National ID must be 16 characters');
+                setError(nationalID, 'National ID must be 14 digits');
                 isFormValid = false;
             } else {
                 setSuccess(nationalID);
