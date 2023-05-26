@@ -137,4 +137,13 @@ let popup2=document.getElementById("popup2"); //transfer popup
         function closePopup2(){
             popup2.classList.remove("open-popup");
         }
+
+ let popup3=document.getElementById("popup3"); //transfer popup
+
+         function openPopup3(){
+            popup3.classList.add("open-popup");
+        }
+        function closePopup3(){
+            popup3.classList.remove("open-popup");
+        }
         

@@ -210,8 +210,16 @@
                             Credit
                         </label>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" onclick="openPopup3()">Submit</button>
+
                 </form>
+                <div class="popup" id="popup3">
+                    <img src="tick.png" >
+                    <h2>Thank you!</h2>
+                    <p>Credit Card Application sent successfully.</p>  
+                    <button type="button" onclick="closePopup3()">OK</button>  
+                
+                </div>
             </div>
         </div>
     <div id="loan" style="display: none;">
@@ -331,7 +339,8 @@
               
               <button onclick="openPopup1()">Submit</button>
               
-            </form><div class="popup" id="popup1">
+            </form>
+            <div class="popup" id="popup1">
                 <img src="tick.png" >
                 <h2>Thank you!</h2>
                 <p>Loan Application sent successfully!</p>  
