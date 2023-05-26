@@ -225,36 +225,42 @@
     <div id="loan" style="display: none;">
         <h3>Loan Application Form</h3>
         <section class="container-loan"> 
-            <form action="#" class="form">
+            <form action="#" id="form" class="form">
                 <div class="select-box">
-                    <select>
-                      <option hidden>Loan Type</option>
-                      <option>Car Loan</option>
+                    <select required>
+                      <option hidden id>Loan Type</option>
+                      <option >Car Loan</option>
                       <option>Personal Loan</option>
                     </select>
+                    
                 </div>
                 <br>
               <label>Personal Information</label>
               <div class="input-box">
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter full name" required />
+                <input type="text" id="fullName" placeholder="Enter full name"/>
+                <div class="error"></div>
               </div>
               <div class="input-box">
                 <label>National ID</label>
-                <input type="number" placeholder="Enter national ID" required />
+                <input type="number" id="nationalID"placeholder="Enter national ID" />
+                <div class="error"></div>
               </div>
               <div class="input-box">
                 <label>Email Address</label>
-                <input type="text" placeholder="Enter email address" required />
+                <input type="text" id="Email" placeholder="Enter email address"  />
+                <div class="error"></div>
               </div>
               <div class="column">
                 <div class="input-box">
                   <label>Phone Number</label>
-                  <input type="number" placeholder="Enter phone number" required />
+                  <input type="number" id="phone" placeholder="Enter phone number"  />
+                  <div class="error"></div>
                 </div>
                 <div class="input-box">
                   <label>Birth Date</label>
-                  <input type="date" placeholder="Enter birth date" required />
+                  <input type="date" id="birthDate" placeholder="Enter birth date"/>
+                  <div class="error"></div>
                 </div>
               </div>
               <div class="gender-box">
@@ -263,61 +269,82 @@
                   <div class="gender">
                     <input type="radio" id="check-male" name="gender" checked />
                     <label for="check-male">male</label>
+                    
                   </div>
                   <div class="gender">
                     <input type="radio" id="check-female" name="gender" />
                     <label for="check-female">Female</label>
                   </div>
                   <div class="gender">
-                    <input type="radio" id="check-other" name="gender" />
+                    <input type="radio" id="check-other" name="gender"  />
                     <label for="check-other">prefer not to say</label>
                   </div>
+                  <div class="error"></div>
                 </div>
               </div>
               <div class="input-box address">
                 <label>Address</label>
-                <input type="text" placeholder="Enter street address" required />
-                <input type="text" placeholder="Enter street address line 2" required />
+                <input type="text" id="address1" placeholder="Enter street address"  />
+                <div class="error"></div>
+                <br>
+                <input type="text" id="address2" placeholder="Enter street address line 2"  />
+                <br>
+                
                 <div class="column">
                   <div class="select-box">
-                    <select>
-                      <option hidden>Country</option>
-                      <option>Egypt</option>
-                      <option>Germany</option>
+                    <select id="country">
+                      <option hidden>Country</option> 
+                      <option value="Egypt">Egypt</option>
+                      <option value="Germany">Germany</option>
                     </select>
+                    <div class="error"></div>
                   </div>
-                  <input type="text" placeholder="Enter your city" required />
+                  <div>
+                  <input type="text" id="city" placeholder="Enter your city"  />
+                  <div class="error"></div>
+                  </div>
                 </div>
                 <div class="column">
-                  <input type="text" placeholder="Enter your region" required />
-                  <input type="number" placeholder="Enter postal code" required />
+                  <div>
+                    <input type="text" id="region" placeholder="Enter your region" style="width: 360px; "/>
+                    <div class="error"></div>
+                  </div>
+                  <div display="width:100%">
+                  <input type="number" id="postal" placeholder="Enter postal code" style="width: 360px;" />
+                  <div class="error"></div>
+                  </div>
                 </div>
-              </div>
+              </div> 
               <br>
               <label> Credit Card Details</label>
               <div class="input-box">
-                <label>Name on Card</label>
-                <input type="text" placeholder="Enter name as on card" required />
+                <label>Cardholder name</label>
+                <input type="text" id="NameOnCard" placeholder="Enter cardholder name"  />
+                <div class="error"></div>
               </div>
               <div class="column">
                 <div class="input-box">
                 <label>Card Number</label>
-                <input type="number" placeholder="Enter card number" required />
+                <input type="number" id="cardNumber" placeholder="Enter card number"  />
+                <div class="error"></div>
               </div>
                 <div class="input-box">
                   <label>CSV</label>
-                  <input type="number" placeholder="Enter CSV" required />
+                  <input type="number" id="csv" placeholder="Enter CSV"  />
+                  <div class="error"></div>
                 </div>
                 
               </div>
               <div class="input-box">
                   <label>Expiry Date</label>
-                  <input type="date" placeholder="Enter expiry date" required />
+                  <input type="date" id="expiryDate" placeholder="Enter expiry date"  />
+                  <div class="error"></div>
               </div>
               <br>
             <div class="input-box">
                 <label>Reason</label>
-                <input type="text" placeholder="Enter the reason for loan application" required />
+                <input type="text" id="reason" placeholder="Enter the reason for loan application"  />
+                <div class="error"></div>
             </div>
             <div class="gender-box">
                 <h3>Payment Plan</h3>
@@ -334,10 +361,11 @@
                     <input type="radio" id="check-graduated" name="gender" />
                     <label for="check-graduated">Graduated Repayment</label>
                   </div>
+                  <div class="error"></div>
                 </div>
               </div>
               
-              <button onclick="openPopup1()">Submit</button>
+              <button>Submit</button>
               
             </form>
             <div class="popup" id="popup1">

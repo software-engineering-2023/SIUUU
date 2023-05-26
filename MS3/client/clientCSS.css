@@ -577,3 +577,17 @@ td {
 td.first-cell {
 	width: 15%;
 }
+
+.success input {
+    border-color: #09c372;
+}
+
+.error input {
+    border-color: #ff3860;
+}
+
+.error {
+    color: #ff3860;
+    font-size: 20px;
+	/* white-space: normal; */
+}

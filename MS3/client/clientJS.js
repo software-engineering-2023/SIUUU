@@ -146,4 +146,209 @@ let popup2=document.getElementById("popup2"); //transfer popup
         function closePopup3(){
             popup3.classList.remove("open-popup");
         }
+
+const form= document.getElementById('form');
+const fullName = document.getElementById('fullName');
+const nationalID = document.getElementById('nationalID');
+const Email = document.getElementById('Email');
+const phone = document.getElementById('phone');
+const birthDate = document.getElementById('birthDate');
+const address1 = document.getElementById('address1');
+//const address2 = document.getElementById('address2');
+const city = document.getElementById('city');
+const region = document.getElementById('region'); 
+const postal = document.getElementById('postal');
+const NameOnCard = document.getElementById('NameOnCard');
+const cardNumber = document.getElementById('cardNumber');
+const csv = document.getElementById('csv');
+const expiryDate = document.getElementById('expiryDate');   
+const reason = document.getElementById('reason'); 
+const country= document.getElementById('country');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+        
+            validateInputs();
+        });
+        
+        const setError = (element, message) => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+        
+            errorDisplay.innerText = message;
+            inputControl.classList.add('error');
+            inputControl.classList.remove('success')
+        }
+        
+        const setSuccess = element => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+        
+            errorDisplay.innerText = '';
+            inputControl.classList.add('success');
+            inputControl.classList.remove('error');
+        };
+        
+        const isValidEmail = Email => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(Email).toLowerCase());
+        }
+        
+        const validateInputs = () => {
+            const NameValue = fullName.value.trim();
+            const nationalIDValue = nationalID.value.trim();
+            const EmailValue = Email.value.trim();
+            const phoneValue = phone.value.trim();
+            const birthDateValue = birthDate.value.trim();
+            const address1Value = address1.value.trim();
+            //const address2Value = address2.value.trim();
+            const cityValue = city.value.trim();
+            const regionValue = region.value.trim();
+            const postalValue = postal.value.trim();
+            const NameOnCardValue = NameOnCard.value.trim();
+            const cardNumberValue = cardNumber.value.trim();
+            const csvValue = csv.value.trim();
+            const expiryDateValue = expiryDate.value.trim();
+            const reasonValue = reason.value.trim();
+            //const countryValue= country.value.trim();
+
+            let isFormValid = true;
+        
+            if(NameValue === '') {
+                setError(fullName, 'Full name is required');
+                 isFormValid = false;
+            } else {
+                setSuccess(fullName);
+            }
+        
+            if(nationalIDValue === '') {
+                setError(nationalID, 'National ID is required');
+                isFormValid = false;
+            } else if (nationalIDValue.length < 16 ) {
+                setError(nationalID, 'National ID must be 16 characters');
+                isFormValid = false;
+            } else {
+                setSuccess(nationalID);
+            }
+        
+            if(EmailValue === '') {
+                setError(Email, 'Email address is required');
+                isFormValid = false;
+            } else if (!isValidEmail(EmailValue)) {
+                setError(Email, 'Provide a valid email address.');
+                isFormValid = false;
+            } else {
+                setSuccess(Email);
+            }
+        
+            if(phoneValue === '') {
+                setError(phone, 'Phone number is required');
+                isFormValid = false;
+            } else if (phoneValue.length < 11) {
+                setError(phone, "Phone numbers must be 11 digits");
+                isFormValid = false;
+            } else {
+                setSuccess(phone);
+            }
+
+            if(birthDateValue === '') {
+                setError(birthDate, 'Birth date is required');
+                isFormValid = false;
+            }
+            else {
+                setSuccess(birthDate);
+            }
+
+            if(address1Value === '') {
+                setError(address1, 'Adress is required');
+                isFormValid = false;
+            } else {
+                setSuccess(address1);
+            }
+
+            if(cityValue === '') {
+                setError(city, 'City is required');
+                isFormValid = false;
+            } else {
+                setSuccess(city);
+            }
+
+            if(regionValue === '') {
+                setError(region, 'Region is required');
+                isFormValid = false;
+            } else {
+                setSuccess(region);
+            }
+
+            if(postalValue === '') {
+                setError(postal, 'Postal is required');
+                isFormValid = false;
+            } else if (postalValue.length < 5) {
+                setError(postal, "Postal must be 5 digits");
+                isFormValid = false;
+            } else {
+                setSuccess(postal);
+            }
+
+            if(NameOnCardValue === '') {
+                setError(NameOnCard, 'Card holder name is required');
+                isFormValid = false;
+            } else {
+                setSuccess(NameOnCard);
+            }
+
+            if(cardNumberValue === '') {
+                setError(cardNumber, 'Card number is required');
+                isFormValid = false;
+            } else if (cardNumberValue.length < 16 ) {
+                setError(cardNumber, 'Card number must be 16 digits');
+                isFormValid = false;
+            } else {
+                setSuccess(cardNumber);
+            }
+
+            if(csvValue === '') {
+                setError(csv, 'Card number is required');
+                isFormValid = false;
+            } else if (csvValue.length < 3 ) {
+                setError(csv, 'Card number must be 3 digits');
+                isFormValid = false;
+            } else {
+                setSuccess(csv);
+            }
+
+            if(expiryDateValue === '') {
+                setError(expiryDate, 'Expiry date is required');
+                isFormValid = false;
+            }
+            else {
+                setSuccess(expiryDate);
+            }
+
+            if(reasonValue === '') {
+                setError(reason, 'Reason is required');
+                isFormValid = false;
+            }
+            else {
+                setSuccess(reason);
+            }
+
+            // counrty.addEventListener('change', () => {
+            //     const selectedOption = country.value;
+                
+            //     if (selectedOption === '') {
+            //       // No option selected
+            //       setError(country,'Please select an option');
+            //     } else {
+                  
+            //       setSuccess(country)
+            //     }
+            // });
+            if(isFormValid)
+            {
+                openPopup1();
+            }
+        };
+
+
         
