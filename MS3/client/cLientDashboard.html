@@ -413,17 +413,34 @@
         <!-- <section class="container-loan">  -->
             <form action="#" class="form">
                 <br>
-              <label>Account No.</label>
+                <div class="gender-option">
+                    <div class="gender">
+                      <input type="radio" id="check-internal" name="gender" checked />
+                      <label for="check-internal">Internal</label>
+                    </div>
+                    <div class="gender">
+                      <input type="radio" id="check-domestic" name="gender" />
+                      <label for="check-domestic">Domestic</label>
+                    </div>
+                    <div class="gender">
+                      <input type="radio" id="check-international" name="gender" />
+                      <label for="check-international">International</label>
+                    </div>
+                  </div> 
               <div class="input-box">
-                <label>Bank Name</label>
+                    <label>Account Number</label>
+                    <input type="text" placeholder="Enter the Account Number" required />
+              </div>
+              <div class="input-box">
+                <label>Recipient Bank Name</label>
                 <input type="text" placeholder="Enter the Bank Name" required />
               </div>
               <div class="input-box">
-                <label>Account No.</label>
+                <label>Recipient Account Number</label>
                 <input type="number" placeholder="Enter the Account Number" required />
               </div>
               <div class="input-box">
-                <label>Receiver Name</label>
+                <label>Recipient Full Name</label>
                 <input type="text" placeholder="Enter the Receiver Name" required />
               </div>
               <div class="column">
@@ -437,13 +454,13 @@
               
             
               
-              <button onclick="openPopup1()">Submit</button>
+              <button onclick="openPopup2()">Submit</button>
               
-            </form><div class="popup" id="popup1">
+            </form><div class="popup" id="popup2">
                 <img src="tick.png" >
-                <h2>Thank you!</h2>
-                <p>Loan Application sent successfully!</p>  
-                <button type="button" onclick="closePopup1()">OK</button>  
+                <h2>Transfer done successfully!</h2>
+                <p>You will receive a message shortly.</p>  
+                <button type="button" onclick="closePopup2()">OK</button>  
             
             </div>
           <!-- </section> -->
