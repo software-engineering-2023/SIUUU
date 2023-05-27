@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNB</title>
-    <link rel="shortcut icon" type="image" href="logo2.png" >
+    <link rel="shortcut icon" type="image" href="logo2.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="ClientCSS.css">
@@ -214,335 +214,370 @@
 
                 </form>
                 <div class="popup" id="popup3">
-                    <img src="tick.png" >
+                    <img src="tick.png">
                     <h2>Thank you!</h2>
-                    <p>Credit Card Application sent successfully.</p>  
-                    <button type="button" onclick="closePopup3()">OK</button>  
-                
+                    <p>Credit Card Application sent successfully.</p>
+                    <button type="button" onclick="closePopup3()">OK</button>
+
                 </div>
             </div>
         </div>
-    <div id="loan" style="display: none;">
-        <h3>Loan Application Form</h3>
-        <section class="container-loan"> 
-            <form action="#" id="form" class="form">
-                <div class="select-box">
-                    <select required>
-                      <option hidden id>Loan Type</option>
-                      <option >Car Loan</option>
-                      <option>Personal Loan</option>
-                    </select>
-                    
+        <div id="loan" style="display: none;">
+            <h3>Loan Application Form</h3>
+            <section class="container-loan">
+                <form action="#" id="form" class="form">
+                    <div class="select-box">
+                        <select required>
+                            <option hidden id>Loan Type</option>
+                            <option>Car Loan</option>
+                            <option>Personal Loan</option>
+                        </select>
+
+                    </div>
+                    <br>
+                    <label>Personal Information</label>
+                    <div class="input-box">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter full name" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-box">
+                        <label>National ID</label>
+                        <input type="number" id="nationalID" placeholder="Enter national ID" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-box">
+                        <label>Email Address</label>
+                        <input type="text" id="Email" placeholder="Enter email address" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="column">
+                        <div class="input-box">
+                            <label>Phone Number</label>
+                            <input type="number" id="phone" placeholder="Enter phone number" />
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-box">
+                            <label>Birth Date</label>
+                            <input type="date" id="birthDate" placeholder="Enter birth date" />
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="gender-box">
+                        <h3>Gender</h3>
+                        <div class="gender-option">
+                            <div class="gender">
+                                <input type="radio" id="check-male" name="gender" checked />
+                                <label for="check-male">male</label>
+
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="check-female" name="gender" />
+                                <label for="check-female">Female</label>
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="check-other" name="gender" />
+                                <label for="check-other">prefer not to say</label>
+                            </div>
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="input-box address">
+                        <label>Address</label>
+                        <input type="text" id="address1" placeholder="Enter street address" />
+                        <div class="error"></div>
+                        <br>
+                        <input type="text" id="address2" placeholder="Enter street address line 2" />
+                        <br>
+
+                        <div class="column">
+                            <div class="select-box">
+                                <select id="country">
+                                    <option hidden>Country</option>
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="Germany">Germany</option>
+                                </select>
+                                <div class="error"></div>
+                            </div>
+                            <div>
+                                <input type="text" id="city" placeholder="Enter your city" />
+                                <div class="error"></div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <input type="text" id="region" placeholder="Enter your region" style="width: 360px; " />
+                                <div class="error"></div>
+                            </div>
+                            <div display="width:100%">
+                                <input type="number" id="postal" placeholder="Enter postal code"
+                                    style="width: 360px;" />
+                                <div class="error"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <label style="font-weight: 600; text-decoration: underline;"> Credit Card Details:</label>
+                    <div class="input-box">
+                        <label>Cardholder name</label>
+                        <input type="text" id="NameOnCard" placeholder="Enter cardholder name" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="column">
+                        <div class="input-box">
+                            <label>Card Number</label>
+                            <input type="number" id="cardNumber" placeholder="Enter card number" />
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-box">
+                            <label>CSV</label>
+                            <input type="number" id="csv" placeholder="Enter CSV" />
+                            <div class="error"></div>
+                        </div>
+
+                    </div>
+                    <div class="input-box">
+                        <label>Expiry Date</label>
+                        <input type="date" id="expiryDate" placeholder="Enter expiry date" />
+                        <div class="error"></div>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <label>Reason</label>
+                        <input type="text" id="reason" placeholder="Enter the reason for loan application" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="gender-box">
+                        <h3>Payment Plan</h3>
+                        <div class="gender-option">
+                            <div class="gender">
+                                <input type="radio" id="check-standard" name="gender" checked />
+                                <label for="check-standard">Standard Repayment</label>
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="check-extended" name="gender" />
+                                <label for="check-extended">Extended Repayment</label>
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="check-graduated" name="gender" />
+                                <label for="check-graduated">Graduated Repayment</label>
+                            </div>
+                            <div class="error"></div>
+                        </div>
+                    </div>
+
+                    <button>Submit</button>
+
+                </form>
+                <div class="popup" id="popup1">
+                    <img src="tick.png">
+                    <h2>Thank you!</h2>
+                    <p>Loan Application sent successfully!</p>
+                    <button type="button" onclick="closePopup1()">OK</button>
+
                 </div>
-                <br>
-              <label>Personal Information</label>
-              <div class="input-box">
-                <label>Full Name</label>
-                <input type="text" id="fullName" placeholder="Enter full name"/>
-                <div class="error"></div>
-              </div>
-              <div class="input-box">
-                <label>National ID</label>
-                <input type="number" id="nationalID"placeholder="Enter national ID" />
-                <div class="error"></div>
-              </div>
-              <div class="input-box">
-                <label>Email Address</label>
-                <input type="text" id="Email" placeholder="Enter email address"  />
-                <div class="error"></div>
-              </div>
-              <div class="column">
-                <div class="input-box">
-                  <label>Phone Number</label>
-                  <input type="number" id="phone" placeholder="Enter phone number"  />
-                  <div class="error"></div>
-                </div>
-                <div class="input-box">
-                  <label>Birth Date</label>
-                  <input type="date" id="birthDate" placeholder="Enter birth date"/>
-                  <div class="error"></div>
-                </div>
-              </div>
-              <div class="gender-box">
-                <h3>Gender</h3>
-                <div class="gender-option">
-                  <div class="gender">
-                    <input type="radio" id="check-male" name="gender" checked />
-                    <label for="check-male">male</label>
-                    
-                  </div>
-                  <div class="gender">
-                    <input type="radio" id="check-female" name="gender" />
-                    <label for="check-female">Female</label>
-                  </div>
-                  <div class="gender">
-                    <input type="radio" id="check-other" name="gender"  />
-                    <label for="check-other">prefer not to say</label>
-                  </div>
-                  <div class="error"></div>
-                </div>
-              </div>
-              <div class="input-box address">
-                <label>Address</label>
-                <input type="text" id="address1" placeholder="Enter street address"  />
-                <div class="error"></div>
-                <br>
-                <input type="text" id="address2" placeholder="Enter street address line 2"  />
-                <br>
-                
-                <div class="column">
-                  <div class="select-box">
-                    <select id="country">
-                      <option hidden>Country</option> 
-                      <option value="Egypt">Egypt</option>
-                      <option value="Germany">Germany</option>
-                    </select>
-                    <div class="error"></div>
-                  </div>
-                  <div>
-                  <input type="text" id="city" placeholder="Enter your city"  />
-                  <div class="error"></div>
-                  </div>
-                </div>
-                <div class="column">
-                  <div>
-                    <input type="text" id="region" placeholder="Enter your region" style="width: 360px; "/>
-                    <div class="error"></div>
-                  </div>
-                  <div display="width:100%">
-                  <input type="number" id="postal" placeholder="Enter postal code" style="width: 360px;" />
-                  <div class="error"></div>
-                  </div>
-                </div>
-              </div> 
-              <br>
-              <label> Credit Card Details</label>
-              <div class="input-box">
-                <label>Cardholder name</label>
-                <input type="text" id="NameOnCard" placeholder="Enter cardholder name"  />
-                <div class="error"></div>
-              </div>
-              <div class="column">
-                <div class="input-box">
-                <label>Card Number</label>
-                <input type="number" id="cardNumber" placeholder="Enter card number"  />
-                <div class="error"></div>
-              </div>
-                <div class="input-box">
-                  <label>CSV</label>
-                  <input type="number" id="csv" placeholder="Enter CSV"  />
-                  <div class="error"></div>
-                </div>
-                
-              </div>
-              <div class="input-box">
-                  <label>Expiry Date</label>
-                  <input type="date" id="expiryDate" placeholder="Enter expiry date"  />
-                  <div class="error"></div>
-              </div>
-              <br>
-            <div class="input-box">
-                <label>Reason</label>
-                <input type="text" id="reason" placeholder="Enter the reason for loan application"  />
-                <div class="error"></div>
-            </div>
-            <div class="gender-box">
-                <h3>Payment Plan</h3>
-                <div class="gender-option">
-                  <div class="gender">
-                    <input type="radio" id="check-standard" name="gender" checked />
-                    <label for="check-standard">Standard Repayment</label>
-                  </div>
-                  <div class="gender">
-                    <input type="radio" id="check-extended" name="gender" />
-                    <label for="check-extended">Extended Repayment</label>
-                  </div>
-                  <div class="gender">
-                    <input type="radio" id="check-graduated" name="gender" />
-                    <label for="check-graduated">Graduated Repayment</label>
-                  </div>
-                  <div class="error"></div>
-                </div>
-              </div>
-              
-              <button>Submit</button>
-              
-            </form>
-            <div class="popup" id="popup1">
-                <img src="tick.png" >
-                <h2>Thank you!</h2>
-                <p>Loan Application sent successfully!</p>  
-                <button type="button" onclick="closePopup1()">OK</button>  
-            
-            </div>
-          </section>
-    </div>
-    <div class="col justify-content-start" id="bills" style="display:none">
-        <div class="row">
-            <div class="col p-6" >
-                <h1 class="text-center">View Bills</h1>
-            </div>
+            </section>
+        </div>
+        <div class="col justify-content-start" id="bills" style="display:none">
             <div class="row">
-                <div class="col-12 p-2" style="margin-bottom:50px ;">
-                    <h2 class="text-left" style="text-decoration: underline;">Here are Your Bills:</h2>
+                <div class="col p-6">
+                    <h1 class="text-center">View Bills</h1>
                 </div>
+                <div class="row">
+                    <div class="col-12 p-2" style="margin-bottom:50px ;">
+                        <h2 class="text-left" style="text-decoration: underline;">Here are Your Bills:</h2>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <td class="first-cell" style="font-weight: bold;">Bill ID</td>
+                        <td style="font-weight: bold;">Type</td>
+                        <td style="font-weight: bold;">Billing Period</td>
+                        <td style="font-weight: bold;">Amount</td>
+                        <td style="font-weight: bold;">Billing Date</td>
+                        <td style="font-weight: bold;">Status</td>
+                        <td style="font-weight: bold;">Pay Now</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">20574</td>
+                        <td>Electricity Usage</td>
+                        <td> 2 Months</td>
+                        <td>3200 EGP</td>
+                        <td>24/5/2023</td>
+                        <td>Unpaid</td>
+                        <td><button class="pay-button">Pay Now</button></td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">21475</td>
+                        <td>Internet Service</td>
+                        <td>1 Month</td>
+                        <td>250 EGP</td>
+                        <td>24/5/2023</td>
+                        <td>Paid</td>
+                        <td><button class="pay-button">Pay Now</button></td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">15786</td>
+                        <td>Phone Subscription</td>
+                        <td>2 Months</td>
+                        <td>85 EGP</td>
+                        <td>24/5/2023</td>
+                        <td>Unpaid</td>
+                        <td><button class="pay-button">Pay Now</button></td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">18986</td>
+                        <td>Rent</td>
+                        <td>6 Months</td>
+                        <td>42000 EGP</td>
+                        <td>11/5/2023</td>
+                        <td>Paid</td>
+                        <td><button class="pay-button">Pay Now</button></td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">54786</td>
+                        <td>Water Usage</td>
+                        <td>1 Month</td>
+                        <td>225 EGP</td>
+                        <td>24/5/2023</td>
+                        <td>Paid</td>
+                        <td><button class="pay-button">Pay Now</button></td>
+                    </tr>
+                </table>
             </div>
-            <table>
-                <tr>
-                    <td class="first-cell" style="font-weight: bold;">Bill ID</td>
-                    <td style="font-weight: bold;">Type</td>
-                    <td style="font-weight: bold;">Billing Period</td>
-                    <td style="font-weight: bold;">Amount</td>
-                    <td style="font-weight: bold;">Billing Date</td>
-                    <td style="font-weight: bold;">Status</td>
-                    <td style="font-weight: bold;">Pay Now</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">20574</td>
-                    <td>Electricity Usage</td>
-                    <td> 2 Months</td>
-                    <td>3200 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Unpaid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
-                </tr>
-                <tr>
-                    <td class="first-cell">21475</td>
-                    <td>Internet Service</td>
-                    <td>1 Month</td>
-                    <td>250 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
-                </tr>
-                <tr>
-                    <td class="first-cell">15786</td>
-                    <td>Phone Subscription</td>
-                    <td>2 Months</td>
-                    <td>85 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Unpaid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
-                </tr>
-                <tr>
-                    <td class="first-cell">18986</td>
-                    <td>Rent</td>
-                    <td>6 Months</td>
-                    <td>42000 EGP</td>
-                    <td>11/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
-                </tr>
-                <tr>
-                    <td class="first-cell">54786</td>
-                    <td>Water Usage</td>
-                    <td>1 Month</td>
-                    <td>225 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
-                </tr>
-            </table>
         </div>
-    </div>
-    <div class="col justify-content-start" id="transfer" style="display:none">
-        <h3>Bank Transfers</h3>
-        <!-- <section class="container-loan">  -->
+        <div class="col justify-content-start" id="transfer" style="display:none">
+            <h3>Bank Transfers</h3>
+            <!-- <section class="container-loan">  -->
             <form action="#" class="form">
                 <br>
                 <div class="gender-option">
                     <div class="gender">
-                      <input type="radio" id="check-internal" name="gender" checked />
-                      <label for="check-internal">Internal</label>
+                        <input type="radio" id="check-internal" name="gender" checked />
+                        <label for="check-internal">Internal</label>
                     </div>
                     <div class="gender">
-                      <input type="radio" id="check-domestic" name="gender" />
-                      <label for="check-domestic">Domestic</label>
+                        <input type="radio" id="check-domestic" name="gender" />
+                        <label for="check-domestic">Domestic</label>
                     </div>
                     <div class="gender">
-                      <input type="radio" id="check-international" name="gender" />
-                      <label for="check-international">International</label>
+                        <input type="radio" id="check-international" name="gender" />
+                        <label for="check-international">International</label>
                     </div>
-                  </div> 
-              <div class="input-box">
+                </div>
+                <div class="input-box">
                     <label>Account Number</label>
                     <input type="text" placeholder="Enter the Account Number" required />
-              </div>
-              <div class="input-box">
-                <label>Recipient Bank Name</label>
-                <input type="text" placeholder="Enter the Bank Name" required />
-              </div>
-              <div class="input-box">
-                <label>Recipient Account Number</label>
-                <input type="number" placeholder="Enter the Account Number" required />
-              </div>
-              <div class="input-box">
-                <label>Recipient Full Name</label>
-                <input type="text" placeholder="Enter the Receiver Name" required />
-              </div>
-              <div class="column">
-                <div class="input-box">
-                  <label>Amount</label>
-                  <input type="number" placeholder="00.00 EGP" required />
                 </div>
-                
-              </div>
-              <br>
-              
-            
-              
-              <button onclick="openPopup2()">Submit</button>
-              
-            </form><div class="popup" id="popup2">
-                <img src="tick.png" >
+                <div class="input-box">
+                    <label>Recipient Bank Name</label>
+                    <input type="text" placeholder="Enter the Bank Name" required />
+                </div>
+                <div class="input-box">
+                    <label>Recipient Account Number</label>
+                    <input type="number" placeholder="Enter the Account Number" required />
+                </div>
+                <div class="input-box">
+                    <label>Recipient Full Name</label>
+                    <input type="text" placeholder="Enter the Receiver Name" required />
+                </div>
+                <div class="column">
+                    <div class="input-box">
+                        <label>Amount</label>
+                        <input type="number" placeholder="00.00 EGP" required />
+                    </div>
+
+                </div>
+                <br>
+                <button onclick="openPopup2()">Submit</button>
+            </form>
+            <div class="popup" id="popup2">
+                <img src="tick.png">
                 <h2>Transfer done successfully!</h2>
-                <p>You will receive a message shortly.</p>  
-                <button type="button" onclick="closePopup2()">OK</button>  
-            
+                <p>You will receive a message shortly.</p>
+                <button type="button" onclick="closePopup2()">OK</button>
+
             </div>
-          <!-- </section> -->
-          <table>
-            <tr>
-                <td class="first-cell" style="font-weight: bold;">Transfer ID</td>
-                <td style="font-weight: bold;">Type</td>
-                <td style="font-weight: bold;">Amount</td>
-                <td style="font-weight: bold;">Payment Date</td>
-            </tr>
-            <tr>
-                <td class="first-cell">78456</td>
-                <td>Direct Transfer</td>
-                <td>12000 EGP</td>
-                <td>24/5/2023</td>
-            </tr>
-            <tr>
-                <td class="first-cell">15968</td>
-                <td>Currency Exchange</td>
-                <td>3600 EGP</td>
-                <td>24/5/2023</td>
-            </tr>
-            <tr>
-                <td class="first-cell">12025</td>
-                <td>Online Purchases</td>
-                <td>4200 EGP</td>
-                <td>24/5/2023</td>
-            </tr>
-            <tr>
-                <td class="first-cell">96573</td>
-                <td>Charity Donations</td>
-                <td>2800 EGP</td>
-                <td>11/5/2023</td>
-            </tr>
-            
+            <!-- </section> -->
+            <table>
+                <tr>
+                    <td class="first-cell" style="font-weight: bold;">Transfer ID</td>
+                    <td style="font-weight: bold;">Type</td>
+                    <td style="font-weight: bold;">Amount</td>
+                    <td style="font-weight: bold;">Payment Date</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">78456</td>
+                    <td>Direct Transfer</td>
+                    <td>12000 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">15968</td>
+                    <td>Currency Exchange</td>
+                    <td>3600 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">12025</td>
+                    <td>Online Purchases</td>
+                    <td>4200 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">96573</td>
+                    <td>Charity Donations</td>
+                    <td>2800 EGP</td>
+                    <td>11/5/2023</td>
+                </tr>
+
+                <br><br><br>
+            </table>
             <br><br><br>
-        </table>
-        <br><br><br>
-        <br><br><br>
-    </div>
+            <br><br><br>
+        </div>
 
+        <div id="cashBack" style="display: none;">
+            <section class="container-loan">
+                <h3>Redeem Reward Points</h3>
+                <form action="#" id="form" class="form">
+                    <div class="row">
+                        <h3 class="col p-6 text p-1 m-2 " style="border-radius: 10px; background-color: #aadee9;"> Total
+                            Reward Points</br> 50
+                        </h3>
+                        <h3 class="col p-6 text p-1 m-2" style=" background-color: #aadee9; border-radius: 10px;">
+                            Points Worth</br> $100
+                        </h3>
+                    </div>
 
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-        </script>
+                    <br>
+                    <div class="alert alert-warning border border-warning rounded" role="alert">
+                        <img src="warning.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Minimum 100 reward points redeem at a time
+                    </div>
+                    <div class="input-box">
+                        <!-- <label>Full Name</label> -->
+                        <input type="text" id="fullName" placeholder="Enter Points to Redeem" />
+                        <div class="error"></div>
+                    </div>
+                    <button>Redeem points</button>
+                    <div>
+                        
+                    </div>
+                </form>
+                <div class="popup" id="popup1">
+                    <img src="tick.png">
+                    <h2>Thank you!</h2>
+                    <p>Loan Application sent successfully!</p>
+                    <button type="button" onclick="closePopup1()">OK</button>
+
+                </div>
+            </section>
+        </div>
+
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+            </script>
 
 </body>
 <script src="ClientJS.js"></script>
