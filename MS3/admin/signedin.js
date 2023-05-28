@@ -6,7 +6,10 @@
 let popup1=document.getElementById("popup1"); //notification popup
 let popup2=document.getElementById("popup2"); //announcement popup
         function openPopup1(){
-            popup1.classList.add("open-popup");
+            if(customerID.value!== "" & reportID.value!== "" & description.value!== "")
+                {
+                    popup1.classList.add("open-popup");
+                }
         }
         function closePopup1(){
             popup1.classList.remove("open-popup");
@@ -31,7 +34,20 @@ let notificationForm=document.getElementById("notificationForm");
           description.value="";
 
          
+
         }
+function sendNotification() {
+        if (customerID.value !== "" && reportID.value !== "" && description.value !== "") {
+                openPopup1();
+                closePopupNotify();
+            }
+        }
+function sendAnnouncement() {
+        if (description1.value !== "") {
+                    openPopup2();
+                    closePopupAnnounce();
+                }
+            }
 let description1= document.getElementById("announceDescription");
 let announcement=document.getElementById("announcement");
         function openPopupAnnounce(){
@@ -42,6 +58,43 @@ let announcement=document.getElementById("announcement");
           description1.value="";
 
         }
+
+// var index, table= document.getElementById('table');
+// for(var i =1; i< table.rows.length; i++)
+// {
+//     table.rows[i].cells[4].onclick = function ()
+//     {
+//         index = this.parentNode.rowIndex;
+//         table.deleteRow(index);
+        
+//     };
+   
+
+// }
+var table = document.getElementById('table');
+var deletedRows = [];
+
+// Retrieve deleted row indices from local storage
+var deletedRowsString = localStorage.getItem('deletedRows');
+if (deletedRowsString) {
+  deletedRows = JSON.parse(deletedRowsString);
+}
+
+for (var i = 1; i < table.rows.length; i++) {
+  if (!deletedRows.includes(i)) {
+    table.rows[i].cells[4].onclick = function() {
+      var index = this.parentNode.rowIndex;
+      table.deleteRow(index);
+      deletedRows.push(index); // Add the deleted row index to the array
+      localStorage.setItem('deletedRows', JSON.stringify(deletedRows)); // Store the updated array in local storage
+    };
+  } else {
+    // Skip rendering deleted rows
+    table.rows[i].style.display = 'none';
+  }
+}
+
+
 
 const search = document.querySelector('.input-group input'),
     table_rows = document.querySelectorAll('tbody tr'),
@@ -115,9 +168,9 @@ const toPDF = function (customers_table) {
     }, 400);
 }
 
-pdf_btn.onclick = () => {
-    toPDF(customers_table);
-}
+// pdf_btn.onclick = () => {
+//     toPDF(customers_table);
+// }
 
 // 4. Converting HTML table to JSON
 
@@ -153,10 +206,10 @@ const toJSON = function (table) {
     return JSON.stringify(table_data, null, 4);
 }
 
-json_btn.onclick = () => {
-    const json = toJSON(customers_table);
-    downloadFile(json, 'json')
-}
+// json_btn.onclick = () => {
+//     const json = toJSON(customers_table);
+//     downloadFile(json, 'json')
+// }
 
 // 5. Converting HTML table to CSV File
 
@@ -189,10 +242,10 @@ const toCSV = function (table) {
     return headings + '\n' + table_data;
 }
 
-csv_btn.onclick = () => {
-    const csv = toCSV(customers_table);
-    downloadFile(csv, 'csv', 'customer orders');
-}
+// csv_btn.onclick = () => {
+//     const csv = toCSV(customers_table);
+//     downloadFile(csv, 'csv', 'customer orders');
+// }
 
 // 6. Converting HTML table to EXCEL File
 
@@ -225,8 +278,8 @@ const toExcel = function (table) {
     return headings + '\n' + table_data;
 }
 
-excel_btn.onclick = () => {
-    const excel = toExcel(customers_table);
-    downloadFile(excel, 'excel');
-}
+// excel_btn.onclick = () => {
+//     const excel = toExcel(customers_table);
+//     downloadFile(excel, 'excel');
+// }
 
