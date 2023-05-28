@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNB</title>
     <link rel="shortcut icon" type="image" href="logo2.png">
+    <link rel="stylesheet" href="path/to/datetimepicker.css">
+    <script src="path/to/datetimepicker.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="ClientCSS.css">
@@ -116,8 +118,9 @@
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                         <li><a class="dropdown-item" href="#">Settings</a></li>
-
+                        <li><a class="dropdown-item" href="#">Report</a></li>
                         <li><a class="dropdown-item" href="#">Profile</a></li>
+
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -205,16 +208,16 @@
                         <h1 style="text-decoration: underline; margin-bottom: 10px;">Credit Card Application</h1>
                         <label class="font-weight-bold" for="name">Please Enter Your Full Name:</label>
                         <input type="text" id="name" name="name" required>
-                        <label class="font-weight-bold" for="name">Please Enter Your Age:</label>
+                        <label class="font-weight-bold" for="name">Please Enter Your National ID:</label>
                         <input type="text" id="age" age="age" required>
                         <div class="card-type">
                             <label>
                                 <input class="font-weight-bold" type="radio" name="cardType" value="debit" required>
-                                Debit
+                                Mastercard
                             </label>
                             <label>
                                 <input type="radio" name="cardType" value="credit" required style="font-weight: bold;">
-                                Credit
+                                Visa
                             </label>
                         </div>
                         <button class="btn-lg" type="submit" onclick="openPopup3()">Submit</button>
@@ -386,6 +389,98 @@
                 </div>
             </section>
         </div>
+
+        <div class="col justify-content-start" id="transaction" style="display:none">
+            <div class="row">
+                <div class="col p-6" style="margin-top:-20px;">
+                    <h1 class="text-center">View Transactions</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 p-2" style="margin-bottom:50px ;">
+                    <h2 class="text-left" style="text-decoration: underline;">Here are Your Credit Card Transactions:</h2>
+                </div>
+            </div>  
+               <table>
+                <tr>
+                <td class="first-cell" style="font-weight: bold;">Transaction ID</td>
+                  <td style="font-weight: bold;" >Merchant Name</td>
+                  <td style="font-weight: bold;">Date</td>
+                  <td style="font-weight: bold;">Amount</td>
+                </tr>
+                <tr>
+                <td class="first-cell">20574</td>
+                  <td>McDonalds</td>
+                  <td>24/5/2023</td>
+                  <td>250 EGP</td>
+                </tr>
+                <tr>
+                 <td class="first-cell">21475</td>
+                  <td>Starbucks</td>
+                  <td>22/5/2023</td>
+                  <td>95 EGP</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">15786</td>
+                      <td>Circle K</td>
+                      <td>19/5/2023</td>
+                      <td>40 EGP</td>
+                </tr>
+                 <tr>
+                    <td class="first-cell">18986</td>
+                      <td>Zara</td>
+                      <td>11/5/2023</td>
+                      <td>4350 EGP</td>
+              </tr>
+                <tr>
+                    <td class="first-cell">54786</td>
+                      <td>KFC</td>
+                      <td>8/5/2023</td>
+                      <td>225 EGP</td>
+                </tr>
+    
+                
+              </table>
+              <br><br><br>
+              <div class="col-12 p-2" style="margin-bottom:50px ;">
+                <h2 class="text-left" style="text-decoration: underline;">Here are Your Bank Transactions:</h2>
+           
+              <table>
+                <tr>
+                    <td class="first-cell" style="font-weight: bold;">Transfer ID</td>
+                    <td style="font-weight: bold;">Type</td>
+                    <td style="font-weight: bold;">Amount</td>
+                    <td style="font-weight: bold;">Payment Date</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">78456</td>
+                    <td>Direct Transfer</td>
+                    <td>12000 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">15968</td>
+                    <td>Currency Exchange</td>
+                    <td>3600 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">12025</td>
+                    <td>Online Purchases</td>
+                    <td>4200 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">96573</td>
+                    <td>Charity Donations</td>
+                    <td>2800 EGP</td>
+                    <td>11/5/2023</td>
+                </tr>
+                
+                <br><br><br>
+            </table>
+        </div>
+        </div>
         <div class="col justify-content-start" id="bills" style="display:none">
             <div class="row">
                 <div class="col p-6">
@@ -395,66 +490,67 @@
             <div class="row" style="margin-bottom:20px ;">
                 <h2 class="text-start" style="text-decoration: underline;">Here are Your Bills:</h2>
             </div>
-            <table>
+            <table id="billl">
                 <tr>
                     <td class="first-cell" style="font-weight: bold;">Bill ID</td>
                     <td style="font-weight: bold;">Type</td>
                     <td style="font-weight: bold;">Billing Period</td>
                     <td style="font-weight: bold;">Amount</td>
                     <td style="font-weight: bold;">Billing Date</td>
-                    <td style="font-weight: bold;">Status</td>
                     <td style="font-weight: bold;">Pay Now</td>
+                    <td style="font-weight: bold;">Reminder</td>
                 </tr>
                 <tr>
                     <td class="first-cell">20574</td>
                     <td>Electricity Usage</td>
                     <td> 2 Months</td>
                     <td>3200 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Unpaid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
+                    <td>29/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
                 </tr>
                 <tr>
                     <td class="first-cell">21475</td>
                     <td>Internet Service</td>
                     <td>1 Month</td>
                     <td>250 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
+                    <td>28/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
                 </tr>
                 <tr>
                     <td class="first-cell">15786</td>
                     <td>Phone Subscription</td>
                     <td>2 Months</td>
                     <td>85 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Unpaid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
+                    <td>24/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
                 </tr>
                 <tr>
                     <td class="first-cell">18986</td>
                     <td>Rent</td>
                     <td>6 Months</td>
                     <td>42000 EGP</td>
-                    <td>11/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
+                    <td>18/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
                 </tr>
                 <tr>
                     <td class="first-cell">54786</td>
                     <td>Water Usage</td>
                     <td>1 Month</td>
                     <td>225 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
-                </tr>
+                    <td>10/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
+                  </tr>
             </table>
-        </div>
+           
+            
+        </div>  
         <div class="col justify-content-start" id="transfer" style="display:none">
             <h3>Bank Transfers</h3>
-            <!-- <section class="container-loan">  -->
             <form action="#" class="form">
                 <br>
                 <div class="gender-option">
