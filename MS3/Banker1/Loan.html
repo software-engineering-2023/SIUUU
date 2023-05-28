@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Requested Loans</title>
+   </head>
+   <body>
+    <button onclick="backhome()">Home!</button>
+      <h1>Accept or Reject Loans!</h1>
+      <form>
+        <div class="my-div1">
+         <label for="list">Loan 1</label><br>
+         <textarea id="list" name="list" rows="5" cols="40" readonly>
+            client-Account:  123344444
+            Requested balance:123
+            due-date:14/12/2022
+            date of request:12/12/2002
+
+         </textarea><br><br>
+         <button onclick="all1()">Accept</button>
+         <button onclick ="all2()">Reject</button>
+        </div>
+
+        <div class="my-div2" >
+         <label for="list">Loan 2</label><br>
+         <textarea id="list" name="list" rows="5" cols="40" readonly>
+            client-Account:  123344444
+            Requested balance:123
+            due-date:14/12/2022
+            date of request:12/12/2002
+
+
+         </textarea><br><br>
+         <button onclick="all3()">Accept</button>
+         <button onclick="all4()">Reject</button>
+         </div>
+         
+         <div class="my-div3">
+         <label for="list">Loan 3</label><br>
+         <textarea id="list" name="list" rows="5" cols="40" readonly>
+            client-Account:  123344444
+            Requested balance:123
+            due-date:14/12/2022
+            date of request:12/12/2002
+
+         </textarea><br><br>
+         <button onclick='all5()'>Accept</button>
+         <button onclick="all6()">Reject</button>
+         </div>
+
+      </form>
+
+
+   </body>
+   <style>
+    button {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+    textarea{
+        font-family:Arial, sans-serif;
+        font-size:32px;
+        color:black;
+        text-align: left;
+        background-color: #EAEFE2;
+    }
+    button{
+        background-color:#FF4A3B;
+        color:white;
+        padding:10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+
+    }
+    div{
+        margin-bottom: 20px;
+        
+    }
+   </style>
+
+   <script>
+    function all1(){
+        removeDiv1();
+        alert('loan Accepted!');
+        
+    }
+    function all2(){
+        removeDiv1();
+        alert('loan Rejected! ');
+       
+    }
+    function all3(){
+        removeDiv2();
+        alert('loan Accepted!');
+        
+    }
+    function all4(){
+        removeDiv2();
+        alert('loan Rejected!');
+        
+    }
+    function all5(){
+        removeDiv3();
+        alert('loan Accepted!');
+        
+    }
+    function all6(){
+        removeDiv3();
+        alert('loan Rejected!');
+        
+    }
+
+
+    function removeDiv1(){
+        var div=document.getElementsByClassName('my-div1')[0];
+        div.parentNode.removeChild(div);
+
+
+    }
+    function removeDiv2(){
+        var div=document.getElementsByClassName('my-div2')[0];
+        div.parentNode.removeChild(div);
+
+
+    }
+    function removeDiv3(){
+        var div=document.getElementsByClassName('my-div3')[0];
+        div.parentNode.removeChild(div);
+
+
+    }
+    function backhome(){
+        window.location='cLientDashboard.html';
+    }
+
+
+   </script>
+</html>
