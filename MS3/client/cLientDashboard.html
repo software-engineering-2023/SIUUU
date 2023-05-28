@@ -205,16 +205,16 @@
                         <h1 style="text-decoration: underline; margin-bottom: 10px;">Credit Card Application</h1>
                         <label class="font-weight-bold" for="name">Please Enter Your Full Name:</label>
                         <input type="text" id="name" name="name" required>
-                        <label class="font-weight-bold" for="name">Please Enter Your Age:</label>
+                        <label class="font-weight-bold" for="name">Please Enter Your National ID:</label>
                         <input type="text" id="age" age="age" required>
                         <div class="card-type">
                             <label>
                                 <input class="font-weight-bold" type="radio" name="cardType" value="debit" required>
-                                Debit
+                                Mastercard
                             </label>
                             <label>
                                 <input type="radio" name="cardType" value="credit" required style="font-weight: bold;">
-                                Credit
+                                Visa
                             </label>
                         </div>
                         <button class="btn-lg" type="submit" onclick="openPopup3()">Submit</button>
@@ -386,6 +386,98 @@
                 </div>
             </section>
         </div>
+
+        <div class="col justify-content-start" id="transaction" style="display:none">
+            <div class="row">
+                <div class="col p-6" style="margin-top:-20px;">
+                    <h1 class="text-center">View Transactions</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 p-2" style="margin-bottom:50px ;">
+                    <h2 class="text-left" style="text-decoration: underline;">Here are Your Credit Card Transactions:</h2>
+                </div>
+            </div>  
+               <table>
+                <tr>
+                <td class="first-cell" style="font-weight: bold;">Transaction ID</td>
+                  <td style="font-weight: bold;" >Merchant Name</td>
+                  <td style="font-weight: bold;">Date</td>
+                  <td style="font-weight: bold;">Amount</td>
+                </tr>
+                <tr>
+                <td class="first-cell">20574</td>
+                  <td>McDonalds</td>
+                  <td>24/5/2023</td>
+                  <td>250 EGP</td>
+                </tr>
+                <tr>
+                 <td class="first-cell">21475</td>
+                  <td>Starbucks</td>
+                  <td>22/5/2023</td>
+                  <td>95 EGP</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">15786</td>
+                      <td>Circle K</td>
+                      <td>19/5/2023</td>
+                      <td>40 EGP</td>
+                </tr>
+                 <tr>
+                    <td class="first-cell">18986</td>
+                      <td>Zara</td>
+                      <td>11/5/2023</td>
+                      <td>4350 EGP</td>
+              </tr>
+                <tr>
+                    <td class="first-cell">54786</td>
+                      <td>KFC</td>
+                      <td>8/5/2023</td>
+                      <td>225 EGP</td>
+                </tr>
+    
+                
+              </table>
+              <br><br><br>
+              <div class="col-12 p-2" style="margin-bottom:50px ;">
+                <h2 class="text-left" style="text-decoration: underline;">Here are Your Bank Transactions:</h2>
+           
+              <table>
+                <tr>
+                    <td class="first-cell" style="font-weight: bold;">Transfer ID</td>
+                    <td style="font-weight: bold;">Type</td>
+                    <td style="font-weight: bold;">Amount</td>
+                    <td style="font-weight: bold;">Payment Date</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">78456</td>
+                    <td>Direct Transfer</td>
+                    <td>12000 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">15968</td>
+                    <td>Currency Exchange</td>
+                    <td>3600 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">12025</td>
+                    <td>Online Purchases</td>
+                    <td>4200 EGP</td>
+                    <td>24/5/2023</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">96573</td>
+                    <td>Charity Donations</td>
+                    <td>2800 EGP</td>
+                    <td>11/5/2023</td>
+                </tr>
+                
+                <br><br><br>
+            </table>
+        </div>
+        </div>
         <div class="col justify-content-start" id="bills" style="display:none">
             <div class="row">
                 <div class="col p-6">
@@ -503,42 +595,7 @@
                 <p>You will receive a message shortly.</p>
                 <button type="button" onclick="closePopup2()">OK</button>
 
-            </div>
-            <!-- </section> -->
-            <table>
-                <tr>
-                    <td class="first-cell" style="font-weight: bold;">Transfer ID</td>
-                    <td style="font-weight: bold;">Type</td>
-                    <td style="font-weight: bold;">Amount</td>
-                    <td style="font-weight: bold;">Payment Date</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">78456</td>
-                    <td>Direct Transfer</td>
-                    <td>12000 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">15968</td>
-                    <td>Currency Exchange</td>
-                    <td>3600 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">12025</td>
-                    <td>Online Purchases</td>
-                    <td>4200 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">96573</td>
-                    <td>Charity Donations</td>
-                    <td>2800 EGP</td>
-                    <td>11/5/2023</td>
-                </tr>
-
-                <br><br><br>
-            </table>
+            </div>  
             <br><br><br>
             <br><br><br>
         </div>
