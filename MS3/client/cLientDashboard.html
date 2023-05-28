@@ -31,17 +31,21 @@
                         <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
+                        <a class="nav-link dropdown-toggle font-weight-bold" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Notifications
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                        <ul class="dropdown-menu" id="notifications">
+                            <li id="billsNot"><a class="dropdown-item" href="#">You Have an unpaid bill of 3200$!</a>
+                            </li>
+                            <li>
+                                <hr id="billsNot1" class="dropdown-divider ">
+                            </li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here asdasda asdas da</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ml-auto">
@@ -191,28 +195,32 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col p-6 d-flex justify-content-center">
-                    <button id="applyCreditCard" class="btn-lg p-1 m-5">Apply for a new Credit Card?</h2>
+                <div class="col d-flex justify-content-center">
+                    <button id="applyCreditCard" class="btn-lg p-1.5 m-5 rounded-100">Apply for a new Credit Card?</h2>
                 </div>
-                <form id="creditCardForm" style="display: none;">
-                    <h1 style="text-decoration: underline;">Credit Card Application</h1>
-                    <label for="name">Please Enter Your Full Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="name">Please Enter Your Age:</label>
-                    <input type="text" id="age" age="age" required>
-                    <div class="card-type">
-                        <label>
-                            <input type="radio" name="cardType" value="debit" required>
-                            Debit
-                        </label>
-                        <label>
-                            <input type="radio" name="cardType" value="credit" required>
-                            Credit
-                        </label>
-                    </div>
-                    <button type="submit" onclick="openPopup3()">Submit</button>
+            </div>
+            <div class="row">
+                <div class="col-6 d-flex justify-content-center m-l 500">
+                    <form id="creditCardForm" style="display: none;">
+                        <h1 style="text-decoration: underline; margin-bottom: 10px;">Credit Card Application</h1>
+                        <label class="font-weight-bold" for="name">Please Enter Your Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label class="font-weight-bold" for="name">Please Enter Your Age:</label>
+                        <input type="text" id="age" age="age" required>
+                        <div class="card-type">
+                            <label>
+                                <input class="font-weight-bold" type="radio" name="cardType" value="debit" required>
+                                Debit
+                            </label>
+                            <label>
+                                <input type="radio" name="cardType" value="credit" required style="font-weight: bold;">
+                                Credit
+                            </label>
+                        </div>
+                        <button class="btn-lg" type="submit" onclick="openPopup3()">Submit</button>
 
-                </form>
+                    </form>
+                </div>
                 <div class="popup" id="popup3">
                     <img src="tick.png">
                     <h2>Thank you!</h2>
@@ -383,68 +391,66 @@
                 <div class="col p-6">
                     <h1 class="text-center">View Bills</h1>
                 </div>
-                <div class="row">
-                    <div class="col-12 p-2" style="margin-bottom:50px ;">
-                        <h2 class="text-left" style="text-decoration: underline;">Here are Your Bills:</h2>
-                    </div>
-                </div>
-                <table>
-                    <tr>
-                        <td class="first-cell" style="font-weight: bold;">Bill ID</td>
-                        <td style="font-weight: bold;">Type</td>
-                        <td style="font-weight: bold;">Billing Period</td>
-                        <td style="font-weight: bold;">Amount</td>
-                        <td style="font-weight: bold;">Billing Date</td>
-                        <td style="font-weight: bold;">Status</td>
-                        <td style="font-weight: bold;">Pay Now</td>
-                    </tr>
-                    <tr>
-                        <td class="first-cell">20574</td>
-                        <td>Electricity Usage</td>
-                        <td> 2 Months</td>
-                        <td>3200 EGP</td>
-                        <td>24/5/2023</td>
-                        <td>Unpaid</td>
-                        <td><button class="pay-button">Pay Now</button></td>
-                    </tr>
-                    <tr>
-                        <td class="first-cell">21475</td>
-                        <td>Internet Service</td>
-                        <td>1 Month</td>
-                        <td>250 EGP</td>
-                        <td>24/5/2023</td>
-                        <td>Paid</td>
-                        <td><button class="pay-button">Pay Now</button></td>
-                    </tr>
-                    <tr>
-                        <td class="first-cell">15786</td>
-                        <td>Phone Subscription</td>
-                        <td>2 Months</td>
-                        <td>85 EGP</td>
-                        <td>24/5/2023</td>
-                        <td>Unpaid</td>
-                        <td><button class="pay-button">Pay Now</button></td>
-                    </tr>
-                    <tr>
-                        <td class="first-cell">18986</td>
-                        <td>Rent</td>
-                        <td>6 Months</td>
-                        <td>42000 EGP</td>
-                        <td>11/5/2023</td>
-                        <td>Paid</td>
-                        <td><button class="pay-button">Pay Now</button></td>
-                    </tr>
-                    <tr>
-                        <td class="first-cell">54786</td>
-                        <td>Water Usage</td>
-                        <td>1 Month</td>
-                        <td>225 EGP</td>
-                        <td>24/5/2023</td>
-                        <td>Paid</td>
-                        <td><button class="pay-button">Pay Now</button></td>
-                    </tr>
-                </table>
             </div>
+            <div class="row" style="margin-bottom:20px ;">
+                <h2 class="text-start" style="text-decoration: underline;">Here are Your Bills:</h2>
+            </div>
+            <table>
+                <tr>
+                    <td class="first-cell" style="font-weight: bold;">Bill ID</td>
+                    <td style="font-weight: bold;">Type</td>
+                    <td style="font-weight: bold;">Billing Period</td>
+                    <td style="font-weight: bold;">Amount</td>
+                    <td style="font-weight: bold;">Billing Date</td>
+                    <td style="font-weight: bold;">Status</td>
+                    <td style="font-weight: bold;">Pay Now</td>
+                </tr>
+                <tr>
+                    <td class="first-cell">20574</td>
+                    <td>Electricity Usage</td>
+                    <td> 2 Months</td>
+                    <td>3200 EGP</td>
+                    <td>24/5/2023</td>
+                    <td>Unpaid</td>
+                    <td><button class="pay-button">Pay Now</button></td>
+                </tr>
+                <tr>
+                    <td class="first-cell">21475</td>
+                    <td>Internet Service</td>
+                    <td>1 Month</td>
+                    <td>250 EGP</td>
+                    <td>24/5/2023</td>
+                    <td>Paid</td>
+                    <td><button class="pay-button">Pay Now</button></td>
+                </tr>
+                <tr>
+                    <td class="first-cell">15786</td>
+                    <td>Phone Subscription</td>
+                    <td>2 Months</td>
+                    <td>85 EGP</td>
+                    <td>24/5/2023</td>
+                    <td>Unpaid</td>
+                    <td><button class="pay-button">Pay Now</button></td>
+                </tr>
+                <tr>
+                    <td class="first-cell">18986</td>
+                    <td>Rent</td>
+                    <td>6 Months</td>
+                    <td>42000 EGP</td>
+                    <td>11/5/2023</td>
+                    <td>Paid</td>
+                    <td><button class="pay-button">Pay Now</button></td>
+                </tr>
+                <tr>
+                    <td class="first-cell">54786</td>
+                    <td>Water Usage</td>
+                    <td>1 Month</td>
+                    <td>225 EGP</td>
+                    <td>24/5/2023</td>
+                    <td>Paid</td>
+                    <td><button class="pay-button">Pay Now</button></td>
+                </tr>
+            </table>
         </div>
         <div class="col justify-content-start" id="transfer" style="display:none">
             <h3>Bank Transfers</h3>
@@ -542,11 +548,14 @@
                 <h3>Redeem Reward Points</h3>
                 <form action="#" id="form" class="form">
                     <div class="row">
-                        <h3 class="col p-6 text p-1 m-2 " style="border-radius: 10px; background-color: #aadee9;"> Total
-                            Reward Points</br> 50
+                        <h3 class="col p-6 text p-1 m-2 text-wrap "
+                            style="border-radius: 10px; background-color: #aadee9;">
+                            Total
+                            Reward Points 50
                         </h3>
-                        <h3 class="col p-6 text p-1 m-2" style=" background-color: #aadee9; border-radius: 10px;">
-                            Points Worth</br> $100
+                        <h3 class="col p-6 text p-1 m-2 text-wrap"
+                            style=" background-color: #aadee9; border-radius: 10px;">
+                            Points Worth<br> $100
                         </h3>
                     </div>
 
@@ -562,7 +571,7 @@
                     </div>
                     <button>Redeem points</button>
                     <div>
-                        
+
                     </div>
                 </form>
                 <div class="popup" id="popup1">

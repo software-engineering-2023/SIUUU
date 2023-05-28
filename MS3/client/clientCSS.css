@@ -260,7 +260,7 @@ footer a {
 	/* display: flex; */
 	align-items: center;
 	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
+	/* height: 100vh; */
 	margin: 0;
 
 }
@@ -374,20 +374,20 @@ footer a {
 } */
 
 .container-loan {
-	top: 0.2rem;
+	/* top: 0.2rem; */
 	align-items: center;
-	padding: 0;
-	position: relative;
-	max-width: 900px;
-	/*width: 100%;*/
+	/* padding: 25px; */
+	/* position: relative; */
+	/* max-width: 900px; */
+	width: 100%;
 	background: #fff;
 	padding: 25px;
 	border-radius: 8px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-	height:100vh;
-	left:  50%;
-	right: 50%;
-	overflow-y: scroll;
+	/* height:100vh; */
+	/* left:  50%; */
+	/* right: 50%; */
+	/* overflow-y: scroll; */
 	
 	
 	

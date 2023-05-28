@@ -29,6 +29,10 @@ const cashBack = document.getElementById('cashBack');
 const applyCreditCard = document.getElementById('applyCreditCard');
 const creditCardForm = document.getElementById('creditCardForm');
 
+const billsNot = document.getElementById('billsNot');
+const divider= document.getElementById('billsNot1');
+const notifications = document.getElementById('notifications');
+
 let activeDiv = "home";
 
 
@@ -110,6 +114,15 @@ if (applyCreditCard && mainView && home) {
         console.log("hello9");
         creditCardForm.style.display = "block";
         applyCreditCard.style.display = "none";
+    })
+}
+
+if(billsNot){
+    billsNot.addEventListener('click', function(){
+        console.log("hello10");
+        billsNot.style.display = "none";
+        divider.style.display = "none";
+        setActiveDiv("bills");
     })
 }
 
