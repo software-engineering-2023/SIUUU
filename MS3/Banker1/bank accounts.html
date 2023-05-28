@@ -1,0 +1,83 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <link rel="stylesheet" href="bank account.css">
+      </head>
+      <body>
+        <button onclick="backhome()">Home!</button>
+
+
+
+
+
+
+        <div class="panel" style="width:100%" ></div>
+    <div class="notification-container">
+        <!-- <button id = "sendNotification" onclick="openPopupNotify()"> Open Bank Account </button> -->
+       
+        <div class="popup" id="notificationForm">
+            <h2>Type in details
+            </h2>
+            <div class="popup-element"><input type="text" id="reportID" placeholder="Account number"></div>
+            <div class="popup-element"><input type="text" id="customerID" placeholder="Customer ID" /></div>
+            <div class="popup-element"><input type="text" id="description" placeholder="Account type" /></div>
+            <div class="popup-element"><input type="text" id="description" placeholder="Account Creation date" /></div>
+            <div class="popup-element"><input type="text" id="description" placeholder="Account status" /></div>
+
+            <div><button onclick="openPopup1(), closePopupNotify()">Send</button></div>
+        </div>
+         <div class="popup" id="popup1">
+            <img src="tick.png" >
+            <h2>Thank you!</h2>
+            <p>Account Created!</p>  
+            <button type="button" onclick="closePopup1(), backhome()">OK</button>  
+        </div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="bank account.js"></script>
+      </body>
+    </html>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
