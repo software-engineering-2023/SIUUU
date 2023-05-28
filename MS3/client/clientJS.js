@@ -137,6 +137,23 @@ let popup1=document.getElementById("popup1"); //loan popup
 
         function openPopup1(){
             popup1.classList.add("open-popup");
+            
+            fullName.value="";
+            nationalID.value="";
+            Email.value="";
+            phone.value="";
+            birthDate.value="";
+            address1.value="";
+            city.value="";
+            region.value="";
+            postal.value="";
+            NameOnCard.value="";
+            cardNumber.value="";
+            csv .value="";
+            expiryDate .value=""; 
+            reason.value="";
+            country.value="Country";
+            loans.value="Loan Type";
         }
         function closePopup1(){
             popup1.classList.remove("open-popup");
@@ -146,9 +163,15 @@ let popup2=document.getElementById("popup2"); //transfer popup
 
         function openPopup2(){
             popup2.classList.add("open-popup");
+            accountNumber.value="";
+            bankName.value="";
+            recipientAccount.value="";
+            recipientName.value="";
+            amount.value="";
         }
         function closePopup2(){
             popup2.classList.remove("open-popup");
+            
         }
 
  let popup3=document.getElementById("popup3"); //transfer popup
@@ -159,6 +182,57 @@ let popup2=document.getElementById("popup2"); //transfer popup
         function closePopup3(){
             popup3.classList.remove("open-popup");
         }
+let popup4= document.getElementById("popup4");
+        function openPopup4()
+        {
+            popup4.classList.add("open-popup");
+        }
+        function closePopup4()
+        {
+            popup4.classList.remove("open-popup");
+        }
+
+const reminder=document.getElementById("reminder");
+const reminderDate= document.getElementById("reminderDate");
+const reminderTime= document.getElementById("reminderTime");
+function openPopupReminder()
+{
+    reminder.classList.add("open-popup");
+}
+function closePopupReminder()
+{
+    reminder.classList.remove("open-popup");
+    reminderDate.value=='';
+    reminderTime.value=='';
+
+}
+
+const send = document.getElementById('send');
+const today = new Date().toISOString().split('T')[0];
+document.getElementById("reminderDate").setAttribute('min', today);
+let result = document.querySelector('h1');
+send.addEventListener('click', () => {
+    let value = reminderDate.value.trim();
+    let timeValue= reminderTime.value.trim();
+    if(value.length!==0 && timeValue.length!==0)
+    {
+        openPopup4();
+        closePopupReminder();
+    }
+});
+// send.addEventListener('click', function handleClick() {
+//     const reminderDate= document.getElementById("reminderDate");
+//     const reminderTime= document.getElementById("reminderTime");
+
+//   if (!(reminderDate.value && reminderTime.value)) {
+//             openPopup4();
+//             closePopupReminder();
+//   }
+// });
+
+
+
+
 
 const form= document.getElementById('form');
 const fullName = document.getElementById('fullName');
@@ -177,6 +251,7 @@ const csv = document.getElementById('csv');
 const expiryDate = document.getElementById('expiryDate');   
 const reason = document.getElementById('reason'); 
 const country= document.getElementById('country');
+const loans= document.getElementById('loans');
 
         form.addEventListener('submit', e => {
             e.preventDefault();
@@ -223,9 +298,16 @@ const country= document.getElementById('country');
             const csvValue = csv.value.trim();
             const expiryDateValue = expiryDate.value.trim();
             const reasonValue = reason.value.trim();
-            //const countryValue= country.value.trim();
+            const countryValue= country.value.trim();
 
             let isFormValid = true;
+            if(loans.value==="Loan Type"){
+                setError(loans,'Choose loan type');
+                isFormValid=false;
+            }
+            else{
+                setSuccess(loans);
+            }
         
             if(NameValue === '') {
                 setError(fullName, 'Full name is required');
@@ -277,6 +359,15 @@ const country= document.getElementById('country');
                 isFormValid = false;
             } else {
                 setSuccess(address1);
+            }
+
+
+            if(country.value==="Country"){
+                setError(country,'Choose your country');
+                isFormValid=false;
+            }
+            else{
+                setSuccess(country);
             }
 
             if(cityValue === '') {
@@ -404,4 +495,137 @@ const country= document.getElementById('country');
 
               
 
-        
+const form2 = document.getElementById('form2');
+const accountNumber = document.getElementById('accountNumber'); 
+const bankName = document.getElementById('bankName');
+const recipientAccount = document.getElementById('recipientAccount');
+const recipientName = document.getElementById('recipientName');
+const amount = document.getElementById('amount');
+form2.addEventListener('submit', e => 
+{
+     e.preventDefault();
+                        
+     validateInputsBankTransfer();
+});
+            
+                        
+const validateInputsBankTransfer = () => {
+const accountNumberValue = accountNumber.value.trim();
+const bankNameValue = bankName.value.trim();
+const recipientAccountValue = recipientAccount.value.trim();
+const recipientNameValue = recipientName.value.trim();
+const amountValue = amount.value.trim();
+
+let isFormValid = true;
+// const radio= document.querySelectorAll('input[name="transfer"]');
+// function checkRadio() {
+//     let isFormValid = false;
+  
+//     for (let i = 0; i < radio.length; i++) {
+//       if (radio[i].checked) {
+//         isFormValid = true;
+//         break;
+//       }
+//     }
+  
+//     if (!isFormValid) {
+//       setError(radio[0], 'Please choose a transfer type');
+//     } else {
+//       setSuccess(radio[0]);
+//     }
+//   }
+//   checkRadio();
+  
+    if(accountNumberValue === '') {
+        setError(accountNumber, 'Account number is required');
+        isFormValid = false;
+    } else if(accountNumberValue.length < 12)
+    {
+        setError(accountNumber,'Account number must be 12 digits' );
+        isFormValid=false;  
+    }
+    else {
+        setSuccess(accountNumber);
+    }
+
+    if(bankNameValue === '') {
+        setError(bankName, 'Bank name is required');
+        isFormValid = false;
+    } else {
+        setSuccess(bankName);
+    }
+
+    if(recipientAccountValue === '') {
+        setError(recipientAccount, 'Recipient account number is required');
+        isFormValid = false;
+    } else if (recipientAccountValue.length < 12) {
+        setError(recipientAccount, 'Recipient account number must be 12 digits.');
+        isFormValid = false;
+    } else {
+        setSuccess(recipientAccount);
+    }
+
+    if(recipientNameValue === '') {
+        setError(recipientName, 'Recipient full name is required');
+        isFormValid = false;
+    } else {
+        setSuccess(recipientName);
+    }
+
+    if(amountValue === '') {
+        setError(amount, 'Amount is required');
+        isFormValid = false;
+    }
+    else {
+        setSuccess(amount);
+    }
+
+    
+    if(isFormValid)
+    {
+        openPopup2();
+    }
+};
+                // PAY NOW DISAPPEAR
+                        // function deleteRecord(button) {
+                        //     var row = button.parentNode.parentNode;
+                        //     row.remove();
+                        //     saveTableState();
+                        //   }
+                        
+                        //   function saveTableState() {
+                        //     var table = document.getElementById("billl");
+                        //     var tableHTML = table.innerHTML;
+                        //     localStorage.setItem("billTableState", tableHTML);
+                        //   }
+                        
+                        //   function loadTableState() {
+                        //     var table = document.getElementById("billl");
+                        //     var tableHTML = localStorage.getItem("billTableState");
+                        //     if (tableHTML) {
+                        //       table.innerHTML = tableHTML;
+                        //     }
+                        //   }
+                        
+                        //   loadTableState();
+                
+                
+                // PAY NOW REAPPEAR WHEN REFRESHED          
+                        var index, table= document.getElementById('billl');
+                            for(var i =1; i< table.rows.length; i++)
+                                {
+                                  table.rows[i].cells[5].onclick = function ()
+                             {
+                                 index = this.parentNode.rowIndex;
+                                 table.deleteRow(index);
+                
+                                 };
+                
+                
+                                }
+                
+                
+                
+                              
+                
+                                

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNB</title>
     <link rel="shortcut icon" type="image" href="logo2.png">
-    <link rel="stylesheet" href="path/to/datetimepicker.css">
-    <script src="path/to/datetimepicker.js"></script>
+    <!-- <link rel="stylesheet" href="path/to/datetimepicker.css">
+    <script src="path/to/datetimepicker.js"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="ClientCSS.css">
@@ -238,15 +238,16 @@
             <section class="container-loan">
                 <form action="#" id="form" class="form">
                     <div class="select-box">
-                        <select required>
-                            <option hidden id>Loan Type</option>
-                            <option>Car Loan</option>
+                        <select id="loans">
+                            <option value="Loan Type">Loan Type</option>
                             <option>Personal Loan</option>
+                            <option>Car Loan</option>
                         </select>
-
+                        <div class="error"></div>
                     </div>
                     <br>
-                    <label>Personal Information</label>
+                    <br>
+                    <label style="font-weight: 600; text-decoration: underline;">Personal information</label>
                     <div class="input-box">
                         <label>Full Name</label>
                         <input type="text" id="fullName" placeholder="Enter full name" />
@@ -304,9 +305,9 @@
                         <div class="column">
                             <div class="select-box">
                                 <select id="country">
-                                    <option hidden>Country</option>
-                                    <option value="Egypt">Egypt</option>
-                                    <option value="Germany">Germany</option>
+                                    <option value="Country">Country</option>
+                                    <option>Egypt</option>
+                                    <option>Germany</option>
                                 </select>
                                 <div class="error"></div>
                             </div>
@@ -355,22 +356,22 @@
                     <br>
                     <div class="input-box">
                         <label>Reason</label>
-                        <input type="text" id="reason" placeholder="Enter the reason for loan application" />
+                        <input type="text" id="reason" style="height: 20vh ; text-align:left; left:0; top:0"placeholder="Enter the reason for loan application" />
                         <div class="error"></div>
                     </div>
                     <div class="gender-box">
                         <h3>Payment Plan</h3>
                         <div class="gender-option">
                             <div class="gender">
-                                <input type="radio" id="check-standard" name="gender" checked />
+                                <input type="radio" id="check-standard" name="payment" checked />
                                 <label for="check-standard">Standard Repayment</label>
                             </div>
                             <div class="gender">
-                                <input type="radio" id="check-extended" name="gender" />
+                                <input type="radio" id="check-extended" name="payment" />
                                 <label for="check-extended">Extended Repayment</label>
                             </div>
                             <div class="gender">
-                                <input type="radio" id="check-graduated" name="gender" />
+                                <input type="radio" id="check-graduated" name="payment" />
                                 <label for="check-graduated">Graduated Repayment</label>
                             </div>
                             <div class="error"></div>
@@ -507,7 +508,26 @@
                     <td>3200 EGP</td>
                     <td>29/6/2023</td>
                     <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
-                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
+                    <td><button class="reminder-button" onclick="openPopupReminder()">Set Reminder</button></td>
+                    <div class="popup" id="reminder">
+                        <div class="close-btn" onclick="closePopupReminder()">&times;</div>
+                        <h2>Set Reminder</h2>
+                        <div class="row">
+                        <div class="popup-element">
+                            <input type="date" id="reminderDate" placeholder="date" min="2023-05-28"/>
+                            <input type="time" id="reminderTime" placeholder="time"/>
+                            
+                        </div>
+                        </div>
+                        <button type="submit" id="send">Send</button>
+                    </div>
+                    <div class="popup" id="popup4">
+                        <img src="tick.png" >
+                        <h2>Thank you!</h2>
+                        <p>You will recieve a reminder on the chosen date.</p>  
+                        <button type="button" onclick="closePopup4()">OK</button>  
+                    </div>
+            
                 </tr>
                 <tr>
                     <td class="first-cell">21475</td>
@@ -551,48 +571,61 @@
         </div>  
         <div class="col justify-content-start" id="transfer" style="display:none">
             <h3>Bank Transfers</h3>
-            <form action="#" class="form">
+            <section class="container-loan">
+            <form action="#" class="form" id="form2">
                 <br>
-                <div class="gender-option">
+                <div class="gender-option" id="transferType">
+                    
                     <div class="gender">
-                        <input type="radio" id="check-internal" name="gender" checked />
+                        <input type="radio" id="check-internal" name="transfer" checked />
                         <label for="check-internal">Internal</label>
+
                     </div>
                     <div class="gender">
-                        <input type="radio" id="check-domestic" name="gender" />
+                        <input type="radio" id="check-domestic" name="transfer" />
                         <label for="check-domestic">Domestic</label>
+                        
                     </div>
                     <div class="gender">
-                        <input type="radio" id="check-international" name="gender" />
+                        <input type="radio" id="check-international" name="transfer" />
                         <label for="check-international">International</label>
+                        
                     </div>
+                    
+
                 </div>
                 <div class="input-box">
                     <label>Account Number</label>
-                    <input type="text" placeholder="Enter the Account Number" required />
+                    <input type="text" id= "accountNumber" placeholder="Enter the Account Number" />
+                    <div class="error"></div>
                 </div>
                 <div class="input-box">
                     <label>Recipient Bank Name</label>
-                    <input type="text" placeholder="Enter the Bank Name" required />
+                    <input type="text" id="bankName"placeholder="Enter the Bank Name"  />
+                    <div class="error"></div>
                 </div>
                 <div class="input-box">
                     <label>Recipient Account Number</label>
-                    <input type="number" placeholder="Enter the Account Number" required />
+                    <input type="number" id="recipientAccount" placeholder="Enter the Account Number"  />
+                    <div class="error"></div>
                 </div>
                 <div class="input-box">
                     <label>Recipient Full Name</label>
-                    <input type="text" placeholder="Enter the Receiver Name" required />
+                    <input type="text" id="recipientName" placeholder="Enter the Receiver Name"  />
+                    <div class="error"></div>
                 </div>
                 <div class="column">
                     <div class="input-box">
                         <label>Amount</label>
-                        <input type="number" placeholder="00.00 EGP" required />
+                        <input type="number" id="amount" placeholder="00.00 EGP"  />
+                        <div class="error"></div>
                     </div>
 
                 </div>
                 <br>
-                <button onclick="openPopup2()">Submit</button>
+                <button>Submit</button>
             </form>
+            </section>
             <div class="popup" id="popup2">
                 <img src="tick.png">
                 <h2>Transfer done successfully!</h2>
@@ -645,12 +678,12 @@
                 <form action="#" id="form" class="form">
                     <div class="row">
                         <h3 class="col p-6 text p-1 m-2 text-wrap "
-                            style="border-radius: 10px; background-color: #aadee9;">
+                            style="border-radius: 10px; background:linear-gradient(#aadee9,#1c8499);font-weight: 800">
                             Total
                             Reward Points 50
                         </h3>
                         <h3 class="col p-6 text p-1 m-2 text-wrap"
-                            style=" background-color: #aadee9; border-radius: 10px;">
+                            style=" background: linear-gradient(#aadee9,#1c8499) ;font-weight: 800; border-radius: 10px; ">
                             Points Worth<br> $100
                         </h3>
                     </div>
@@ -662,19 +695,19 @@
                     </div>
                     <div class="input-box">
                         <!-- <label>Full Name</label> -->
-                        <input type="text" id="fullName" placeholder="Enter Points to Redeem" />
+                        <input type="text" id="points" placeholder="Enter Points to Redeem" />
                         <div class="error"></div>
                     </div>
-                    <button>Redeem points</button>
+                    <button onclick="openPopup3()">Redeem points</button>
                     <div>
 
                     </div>
                 </form>
-                <div class="popup" id="popup1">
+                <div class="popup" id="popup3">
                     <img src="tick.png">
-                    <h2>Thank you!</h2>
-                    <p>Loan Application sent successfully!</p>
-                    <button type="button" onclick="closePopup1()">OK</button>
+                    <h2>Congratulations!</h2>
+                    <p>you have redeemed points.</p>
+                    <button type="button" onclick="closePopup3()">OK</button>
 
                 </div>
             </section>
