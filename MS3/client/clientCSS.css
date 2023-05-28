@@ -358,56 +358,47 @@ footer a {
 }
 
 .card-container:not(:last-child) {
-    border-bottom: 3px solid #7ad8eb;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+	border-bottom: 3px solid #7ad8eb;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 #creditCardForm {
 	margin-top: 100px;
 	padding: 5px;
 }
-/*
-.card-type label {
-	display: inline-block;
-	margin-right: 10px;
-} */
 
 .container-loan {
-	/* top: 0.2rem; */
 	align-items: center;
-	/* padding: 25px; */
-	/* position: relative; */
-	/* max-width: 900px; */
 	width: 100%;
 	background: #fff;
 	padding: 25px;
 	border-radius: 8px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-	/* height:100vh; */
-	/* left:  50%; */
-	/* right: 50%; */
 	overflow-y: scroll;
-	
-	
-	
-  }
-  .container-loan .form {
+
+}
+
+.container-loan .form {
 	align-items: center;
 	margin-top: 30px;
-  	width: 100%; /* Adjust the width of the form as needed */
-  	padding: 25px;
-  	border-radius: 8px;
-  	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
-  .form .input-box {
+	width: 100%;
+	/* Adjust the width of the form as needed */
+	padding: 25px;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form .input-box {
 	width: 100%;
 	margin-top: 20px;
-  }
-  .input-box label {
+}
+
+.input-box label {
 	color: #333;
-  }
-  .form :where(.input-box input, .select-box) {
+}
+
+.form :where(.input-box input, .select-box) {
 	position: relative;
 	height: 50px;
 	width: 100%;
@@ -418,53 +409,65 @@ footer a {
 	border: 1px solid #ddd;
 	border-radius: 6px;
 	padding: 0 15px;
-  }
-  .input-box input:focus {
+}
+
+.input-box input:focus {
 	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  }
-  .form .column {
+}
+
+.form .column {
 	display: flex;
 	column-gap: 15px;
-  }
-  .form .gender-box {
+}
+
+.form .gender-box {
 	margin-top: 20px;
-  }
-  .gender-box h3 {
+}
+
+.gender-box h3 {
 	color: #333;
 	font-size: 1rem;
 	font-weight: 400;
 	margin-bottom: 8px;
-  }
-  .form :where(.gender-option, .gender) {
+}
+
+.form :where(.gender-option, .gender) {
 	display: flex;
 	align-items: center;
 	column-gap: 50px;
 	flex-wrap: wrap;
-  }
-  .form .gender {
+}
+
+.form .gender {
 	column-gap: 5px;
-  }
-  .gender input {
+}
+
+.gender input {
 	accent-color: rgb(130, 106, 251);
-  }
-  .form :where(.gender input, .gender label) {
+}
+
+.form :where(.gender input, .gender label) {
 	cursor: pointer;
-  }
-  .gender label {
+}
+
+.gender label {
 	color: #707070;
-  }
-  .address :where(input, .select-box) {
+}
+
+.address :where(input, .select-box) {
 	margin-top: 15px;
-  }
-  .select-box select {
+}
+
+.select-box select {
 	height: 100%;
 	width: 100%;
 	outline: none;
 	border: none;
 	color: #707070;
 	font-size: 1rem;
-  }
-  .form button {
+}
+
+.form button {
 	height: 100px;
 	width: 100%;
 	color: #fff;
@@ -475,63 +478,71 @@ footer a {
 	cursor: pointer;
 	transition: all 0.2s ease;
 	background: #FF4B2B;
-  }
-  .form button:hover {
+}
+
+.form button:hover {
 	background: #fa300d;
-  }
-  @media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 500px) {
 	.form .column {
-	  flex-wrap: wrap;
+		flex-wrap: wrap;
 	}
+
 	.form :where(.gender-option, .gender) {
-	  row-gap: 15px;
+		row-gap: 15px;
 	}
-  }
-  .container-popup{
-	width:100% ;
+}
+
+.container-popup {
+	width: 100%;
 	height: 100vh;
 	background: #3c5077;
-	display:flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	box-shadow: inset;
 }
-.popup{
+
+.popup {
 	width: 400px;
 	background: #fff;
 	border-radius: 6px;
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translate(-50%,-50%) scale(0.1);
-	text-align:center;
+	transform: translate(-50%, -50%) scale(0.1);
+	text-align: center;
 	padding: 0 30px 30px;
-	color:#333;
+	color: #333;
 	visibility: hidden;
 	transition: transform 0.4s, top 0.4s;
 	background-color: #EAEFE2;
 	z-index: 9999;
-	box-shadow:inset;
-}
-.open-popup{
-	visibility: visible;
-	top:50% ;
-	transform: translate(-50%,-50%) scale(1);
 	box-shadow: inset;
 }
 
-.popup img{
+.open-popup {
+	visibility: visible;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	box-shadow: inset;
+}
+
+.popup img {
 	width: 100px;
 	margin-top: -50px;
 	border-radius: 50%;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.popup h2{
+
+.popup h2 {
 	font-size: 38px;
 	font-weight: 500;
 	margin: 30px 0 10px;
 }
-.popup button{
+
+.popup button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
@@ -542,18 +553,17 @@ footer a {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
-	
+
 }
 
-.popup .popup-element{
+.popup .popup-element {
 	margin: 15px 0px;
 }
 
-.popup .popup-element input[type="text"]
-{
+.popup .popup-element input[type="text"] {
 	margin-top: 5px;
-	display:block;
-	width:100%;
+	display: block;
+	width: 100%;
 	padding: 10px;
 	outline: none;
 	border: 1px solid #aaa;
@@ -579,16 +589,15 @@ td.first-cell {
 }
 
 .success input {
-    border-color: #09c372;
+	border-color: #09c372;
 }
 
 .error input {
-    border-color: #ff3860;
+	border-color: #ff3860;
 }
 
 .error {
-    color: #ff3860;
-    font-size: 20px;
+	color: #ff3860;
+	font-size: 20px;
 	/* white-space: normal; */
 }
-
