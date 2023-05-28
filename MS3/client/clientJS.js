@@ -362,6 +362,46 @@ const country= document.getElementById('country');
                 openPopup1();
             }
         };
+// PAY NOW DISAPPEAR
+        // function deleteRecord(button) {
+        //     var row = button.parentNode.parentNode;
+        //     row.remove();
+        //     saveTableState();
+        //   }
+        
+        //   function saveTableState() {
+        //     var table = document.getElementById("billl");
+        //     var tableHTML = table.innerHTML;
+        //     localStorage.setItem("billTableState", tableHTML);
+        //   }
+        
+        //   function loadTableState() {
+        //     var table = document.getElementById("billl");
+        //     var tableHTML = localStorage.getItem("billTableState");
+        //     if (tableHTML) {
+        //       table.innerHTML = tableHTML;
+        //     }
+        //   }
+        
+        //   loadTableState();
 
+
+// PAY NOW REAPPEAR WHEN REFRESHED          
+        var index, table= document.getElementById('billl');
+            for(var i =1; i< table.rows.length; i++)
+                {
+                  table.rows[i].cells[5].onclick = function ()
+             {
+                 index = this.parentNode.rowIndex;
+                 table.deleteRow(index);
+
+                 };
+
+
+                }
+
+
+
+              
 
         

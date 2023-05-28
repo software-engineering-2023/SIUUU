@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNB</title>
     <link rel="shortcut icon" type="image" href="logo2.png">
+    <link rel="stylesheet" href="path/to/datetimepicker.css">
+    <script src="path/to/datetimepicker.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="ClientCSS.css">
@@ -487,66 +489,67 @@
             <div class="row" style="margin-bottom:20px ;">
                 <h2 class="text-start" style="text-decoration: underline;">Here are Your Bills:</h2>
             </div>
-            <table>
+            <table id="billl">
                 <tr>
                     <td class="first-cell" style="font-weight: bold;">Bill ID</td>
                     <td style="font-weight: bold;">Type</td>
                     <td style="font-weight: bold;">Billing Period</td>
                     <td style="font-weight: bold;">Amount</td>
                     <td style="font-weight: bold;">Billing Date</td>
-                    <td style="font-weight: bold;">Status</td>
                     <td style="font-weight: bold;">Pay Now</td>
+                    <td style="font-weight: bold;">Reminder</td>
                 </tr>
                 <tr>
                     <td class="first-cell">20574</td>
                     <td>Electricity Usage</td>
                     <td> 2 Months</td>
                     <td>3200 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Unpaid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
+                    <td>29/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
                 </tr>
                 <tr>
                     <td class="first-cell">21475</td>
                     <td>Internet Service</td>
                     <td>1 Month</td>
                     <td>250 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
+                    <td>28/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
                 </tr>
                 <tr>
                     <td class="first-cell">15786</td>
                     <td>Phone Subscription</td>
                     <td>2 Months</td>
                     <td>85 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Unpaid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
+                    <td>24/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
                 </tr>
                 <tr>
                     <td class="first-cell">18986</td>
                     <td>Rent</td>
                     <td>6 Months</td>
                     <td>42000 EGP</td>
-                    <td>11/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
+                    <td>18/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
                 </tr>
                 <tr>
                     <td class="first-cell">54786</td>
                     <td>Water Usage</td>
                     <td>1 Month</td>
                     <td>225 EGP</td>
-                    <td>24/5/2023</td>
-                    <td>Paid</td>
-                    <td><button class="pay-button">Pay Now</button></td>
-                </tr>
+                    <td>10/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
+                  </tr>
             </table>
-        </div>
+           
+            
+        </div>  
         <div class="col justify-content-start" id="transfer" style="display:none">
             <h3>Bank Transfers</h3>
-            <!-- <section class="container-loan">  -->
             <form action="#" class="form">
                 <br>
                 <div class="gender-option">
