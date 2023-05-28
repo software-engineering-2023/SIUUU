@@ -555,6 +555,21 @@ footer a {
 	transition: transform 80ms ease-in;
 
 }
+.popup .close-btn{
+	cursor:pointer;
+	position:absolute;
+	right : 20px;
+	top:20px;
+	width:30px;
+	height:30px;
+	background:#FF4B2B;
+	color:#fff;
+	font-size:25px;
+	font-weight:600;
+	line-height:30px;
+	text-align:center;
+	border-radius:50%;
+  }
 
 .popup .popup-element {
 	margin: 15px 0px;
