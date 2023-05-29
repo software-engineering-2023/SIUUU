@@ -26,7 +26,7 @@ const transfer = document.getElementById('transfer');
 const cashBackButton = document.getElementById('cashBackButton');
 const cashBack = document.getElementById('cashBack');
 
-const search=document.getElementById('btn btn-custom');
+const search = document.getElementById('btn btn-custom');
 
 
 
@@ -34,11 +34,8 @@ const search=document.getElementById('btn btn-custom');
 let activeDiv = "home";
 
 
-if (signInButton && signUpButton && container) {
-    signUpButton.addEventListener('click', function () {
-        container.classList.add("right-panel-active");
+if (signInButton) {
 
-    });
     signInButton.addEventListener('click', function () {
         container.classList.remove("right-panel-active");
     })
@@ -118,74 +115,74 @@ function setActiveDiv(divId) {
 
 // search.addEventListener('click',function(){
 
-    
+
 //         var text = document.getElementById("textField");
 //         text.style.display = "block";
-      
+
 
 
 // });
 function displayText() {
     var text = document.getElementById("textField");
     text.style.display = "block";
-  }
-  let popup1=document.getElementById("popup1"); //notification popup
-  let popup2=document.getElementById("popup2"); //announcement popup
-          function openPopup1(){
-              popup1.classList.add("open-popup");
-          }
-          function closePopup1(){
-              popup1.classList.remove("open-popup");
-          }
-          function openPopup2(){
-              popup2.classList.add("open-popup");
-          }
-          function closePopup2(){
-              popup2.classList.remove("open-popup");
-          }
-  let reportID=document.getElementById("reportID");
-  let customerID= document.getElementById("customerID");
-  let description= document.getElementById("description");
-  let notificationForm=document.getElementById("notificationForm");
-          function openPopupNotify(){
-            notificationForm.classList.add("open-popup");
-          }
-          function closePopupNotify(){
-            notificationForm.classList.remove("open-popup");
-            reportID.value="";
-            customerID.value="";
-            description.value="";
-  
-           
-          }
-          function func(){
-            var inputval=document.getElementById('here').value;
-            
-            document.getElementById('unique').innerHTML='Account ID:'+''+inputval;
-          }
-          function opencredit(){
-            window.location='creditcard.html';
-          }
-          function openloan(){
-            window.location='Loan.html';
-          }
-          function signout(){
-            window.location='clientLogIn.html'
-          }
-          function func1(){
-            var inputval=document.getElementById('nice').value;
-            
-            document.getElementById('nice1').innerHTML=inputval;
-          }
-          function openacc(){
-            window.location='bank accounts.html';
-          }
-          function closeacc(){
-            window.location='bank close.html';
-          }
+}
+let popup1 = document.getElementById("popup1"); //notification popup
+let popup2 = document.getElementById("popup2"); //announcement popup
+function openPopup1() {
+    popup1.classList.add("open-popup");
+}
+function closePopup1() {
+    popup1.classList.remove("open-popup");
+}
+function openPopup2() {
+    popup2.classList.add("open-popup");
+}
+function closePopup2() {
+    popup2.classList.remove("open-popup");
+}
+let reportID = document.getElementById("reportID");
+let customerID = document.getElementById("customerID");
+let description = document.getElementById("description");
+let notificationForm = document.getElementById("notificationForm");
+function openPopupNotify() {
+    notificationForm.classList.add("open-popup");
+}
+function closePopupNotify() {
+    notificationForm.classList.remove("open-popup");
+    reportID.value = "";
+    customerID.value = "";
+    description.value = "";
+
+
+}
+function func() {
+    var inputval = document.getElementById('here').value;
+
+    document.getElementById('unique').innerHTML = 'Account ID:' + '' + inputval;
+}
+function opencredit() {
+    window.location = 'creditcard.html';
+}
+function openloan() {
+    window.location = 'Loan.html';
+}
+function signout() {
+    window.location = 'clientLogIn.html'
+}
+function func1() {
+    var inputval = document.getElementById('nice').value;
+
+    document.getElementById('nice1').innerHTML = inputval;
+}
+function openacc() {
+    window.location = 'bank accounts.html';
+}
+function closeacc() {
+    window.location = 'bank close.html';
+}
 
 
 
 
 
-          
+
