@@ -181,7 +181,17 @@ function closeacc() {
     window.location = 'bank close.html';
 }
 
+var acceptButtons = document.querySelectorAll('.my-div1 button, .my-div2 button, .my-div3 button');
 
+// Add event listeners to the buttons
+acceptButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    // Get the parent element (div) of the button
+    var parentDiv = button.parentNode;
+    // Remove the parent div element
+    parentDiv.parentNode.removeChild(parentDiv);
+  });
+});
 
 
 
