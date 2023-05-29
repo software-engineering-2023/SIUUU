@@ -197,30 +197,37 @@ function closePopup2() {
 
 let popup3 = document.getElementById("popup3"); //transfer popup
 
-function openPopup3() {
-    popup3.classList.add("open-popup");
-}
-function closePopup3() {
-    popup3.classList.remove("open-popup");
-}
-let popup4 = document.getElementById("popup4");
-function openPopup4() {
-    popup4.classList.add("open-popup");
-}
-function closePopup4() {
-    popup4.classList.remove("open-popup");
-}
+         function openPopup3(){
+            popup3.classList.add("open-popup");
+        }
+        function closePopup3(){
+            popup3.classList.remove("open-popup");
+        }
+let popup4= document.getElementById("popup4"); //reminder popup
+        function openPopup4()
+        {
+            popup4.classList.add("open-popup");
+            
+        }
+        function closePopup4()
+        {
+            popup4.classList.remove("open-popup");
+            document.getElementById("reminderButton").disabled = true;
+        }
 
-const reminder = document.getElementById("reminder");
-const reminderDate = document.getElementById("reminderDate");
-const reminderTime = document.getElementById("reminderTime");
-function openPopupReminder() {
+const reminder=document.getElementById("reminder");
+const reminderDate= document.getElementById("reminderDate");
+const reminderTime= document.getElementById("reminderTime");
+document.getElementById("reminderButton").disabled = false;
+function openPopupReminder()
+{
     reminder.classList.add("open-popup");
+    
 }
 function closePopupReminder() {
     reminder.classList.remove("open-popup");
-    reminderDate.value == '';
-    reminderTime.value == '';
+    reminderDate.value=="null";
+    reminderTime.value=="null";
 
 }
 
