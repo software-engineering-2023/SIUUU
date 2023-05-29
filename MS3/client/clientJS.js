@@ -628,15 +628,24 @@ const validateInputsBankTransfer = () => {
 
 
 // PAY NOW REAPPEAR WHEN REFRESHED          
-var index, table = document.getElementById('billl');
-for (var i = 1; i < table.rows.length; i++) {
-    table.rows[i].cells[5].onclick = function () {
+// var index, table = document.getElementById('billl');
+// for (var i = 1; i < table.rows.length; i++) {
+//     table.rows[i].cells[7].onclick = function () {
+//         index = this.parentNode.rowIndex;
+//         table.deleteRow(index);
+
+//     };
+
+// }
+var index, table= document.getElementById('billl');
+    for(var i =1; i< table.rows.length; i++)
+{
+    table.rows[i].cells[7].onclick = function ()
+    {
         index = this.parentNode.rowIndex;
         table.deleteRow(index);
-
+        
     };
-
-
 }
 
 let reportDescription = document.getElementById("reportDescription");
