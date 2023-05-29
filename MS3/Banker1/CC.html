@@ -57,11 +57,6 @@
                         <a href="closeBankAccount.html" class="nav-link link-dark" id="transferButton">
                             Close Bank Accounts
                         </a>
-                    </li>
-                    <li>
-                        <a href="reports.html" class="nav-link link-dark" id="transferButton"> Reports
-                        </a>
-                    </li>
                 </ul>
                 <div class="dropdown" style="padding-bottom: 4rem;">
                     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
@@ -81,51 +76,41 @@
             </div>
         </div>
         <div class="col justify-content-center" style="margin-top: 100px;">
-            <h1>Accept or Reject Credit cards!</h1>
+            
             <form>
+                <h1 style="text-align: center; " >Accept or Reject Credit cards!</h1><br>
                 <div class="my-div1">
-                    <div class="card-container">
-                        <h3>Credit Card Details</h3>
-                        <ul>
-                            <li>Card Type: Visa</li>
-                            <li>Card Number: 1212 1212 1212 1212</li>
-                            <li>Expiration Date: 12/24</li>
-                            <li>Cardholder Name: Amr </li>
-                            <br>
-                            <button onclick="openPopupCredit()">Report</button>
-                        </ul><br><br>
+                    <label for="list" style="font-weight: bold; font-size: 32pt;" >Card 1</label><br>
+                    <textarea id="list" name="list" rows="5" cols="50" readonly style="border: #FF4B2B;">
+
+                  Client Account:  1234 7837 7463 2327
+                  Account balance: 2,000 EGP
+                  Date of request: 3/10/2022
+                    </textarea><br><br>
                     <button onclick="all1()">Accept</button>
                     <button onclick="all2()">Reject</button>
                 </div>
 
                 <div class="my-div2">
-                    <label for="list">Card 2</label><br>
-                    <div class="card-container">
-                        <h3>Credit Card Details</h3>
-                        <ul>
-                            <li>Card Type: Visa</li>
-                            <li>Card Number: 1212 1212 1212 1212</li>
-                            <li>Expiration Date: 12/24</li>
-                            <li>Cardholder Name: Amr </li>
-                            <br>
-                            <button onclick="openPopupCredit()">Report</button>
-                        </ul><br><br>
+                    <label for="list" style="font-weight: bold; font-size: 32pt;" >Card 2</label><br>
+                    <textarea id="list" name="list" rows="5" cols="50" readonly style="border: #FF4B2B;">
+
+                  Client Account:  3827 3427 4273 3742
+                  Account balance: 3,500 EGP
+                  Date of request: 23/2/2022
+                    </textarea><br><br>
                     <button onclick="all3()">Accept</button>
                     <button onclick="all4()">Reject</button>
                 </div>
 
                 <div class="my-div3">
-                    <label for="list">Card 3</label><br>
-                    <div class="card-container">
-                        <h3>Credit Card Details</h3>
-                        <ul>
-                            <li>Card Type: Visa</li>
-                            <li>Card Number: 1212 1212 1212 1212</li>
-                            <li>Expiration Date: 12/24</li>
-                            <li>Cardholder Name: Amr </li>
-                            <br>
-                            <button onclick="openPopupCredit()">Report</button>
-                        </ul><br><br>
+                    <label for="list" style="font-weight: bold; font-size: 32pt;" >Card 3</label><br>
+                    <textarea id="list" name="list" rows="5" cols="50" readonly style="border: #FF4B2B;">
+
+                  Client Account:  1928 4739 2344 1242
+                  Account balance: 23,750 EGP
+                  Date of request: 14/12/2022
+                    </textarea><br><br>
                     <button onclick='all5()'>Accept</button>
                     <button onclick="all6()">Reject</button>
                 </div>
