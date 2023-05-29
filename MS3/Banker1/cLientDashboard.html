@@ -133,12 +133,10 @@
                         <strong id="nice1" style="padding: auto;">(mo)</strong>
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" onclick='signout()' href="#">Sign out</a></li>
+                        <li><a class="dropdown-item" href="clientLogIn.html">Sign out</a></li>
                     </ul>
                 </div>
             </div>
@@ -154,8 +152,9 @@
                     <h2 class="text-left">Search for Customers</h2>
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <input id="here" type="number" class="form-control me-2 d-inline" type="search" oninput='func()'
-                                placeholder="please enter customers account number" aria-label="Search">
+                            <input id="here" type="number" class="form-control me-2 d-inline" type="search"
+                                oninput='func()' placeholder="please enter customers account number"
+                                aria-label="Search">
                         </div>
                         <button onclick="displayText()">Search</button>
                     </div>
@@ -168,47 +167,47 @@
                     </div>
                 </div>
             </div>
-            
 
-                <div class="notification-container"style="margin-top: 90px;" id="form1">
 
-                    <button id="sendNotification" onclick="openPopupNotify()"> Send Notification </button>
-                    <div class="popup" id="notificationForm">
-                        <div class="close-btn" onclick="closePopupNotify()">&times;</div>
-                        <h2>Type in a Notification</h2>
-                        <div class="popup-element">
-                            <input type="number" id="reportID" placeholder="Report ID" required>
-        
-                        </div>
-        
-                        <div class="popup-element">
-        
-                            <input type="number" id="customerID" placeholder="Customer ID" required />
-        
-                        </div>
-        
-                        <div class="popup-element">
-        
-                            <input type="text" id="description" placeholder="Description" required />
-        
-                        </div>
-        
-                        <button id="sendButton" type="submit" onclick="sendNotification()">Send</button>
+            <div class="notification-container" style="margin-top: 90px;" id="form1">
+
+                <button id="sendNotification" onclick="openPopupNotify()"> Send Notification </button>
+                <div class="popup" id="notificationForm">
+                    <div class="close-btn" onclick="closePopupNotify()">&times;</div>
+                    <h2>Type in a Notification</h2>
+                    <div class="popup-element">
+                        <input type="number" id="reportID" placeholder="Report ID" required>
+
                     </div>
-                    <div class="popup" id="popup1">
-                        <img src="tick.png">
-                        <h2>Thank you!</h2>
-                        <p>Notification sent successfully!</p>
-                        <button type="button" onclick="closePopup1()">OK</button>
+
+                    <div class="popup-element">
+
+                        <input type="number" id="customerID" placeholder="Customer ID" required />
+
                     </div>
-            
+
+                    <div class="popup-element">
+
+                        <input type="text" id="description" placeholder="Description" required />
+
+                    </div>
+
+                    <button id="sendButton" type="submit" onclick="sendNotification()">Send</button>
+                </div>
+                <div class="popup" id="popup1">
+                    <img src="tick.png">
+                    <h2>Thank you!</h2>
+                    <p>Notification sent successfully!</p>
+                    <button type="button" onclick="closePopup1()">OK</button>
                 </div>
 
+            </div>
 
 
 
 
-                    <!-- <div class="row">
+
+            <!-- <div class="row">
                 <div class="col-12">
                     <h3 class="text-left">Account Number: (AccountNumber)</h3>
                 </div>
@@ -233,10 +232,10 @@
                     <h3 class="text-left">Account Creation Date: (AccountCreationDate)</h3>
                 </div>
             </div> -->
-                </div>
-            </div>
+        </div>
+    </div>
 
-            <!-- <div class="panel" style="width:50%" ></div>
+    <!-- <div class="panel" style="width:50%" ></div>
     <div class="notification-container">
         <button id = "sendNotification" onclick="openPopupNotify()"> Send Notification </button>
         <div class="popup" id="notificationForm">
@@ -254,10 +253,9 @@
         </div>
     </div> -->
 
-            <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-                crossorigin="anonymous">
-                </script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
 
 </body>
 <script src="ClientJS.js"></script>
