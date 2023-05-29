@@ -210,13 +210,12 @@ function openPopup4() {
 }
 function closePopup4() {
     popup4.classList.remove("open-popup");
-    document.getElementById("reminderButton").disabled = true;
 }
 
 const reminder = document.getElementById("reminder");
 const reminderDate = document.getElementById("reminderDate");
 const reminderTime = document.getElementById("reminderTime");
-document.getElementById("reminderButton").disabled = false;
+
 function openPopupReminder() {
     reminder.classList.add("open-popup");
 
@@ -634,17 +633,13 @@ const validateInputsBankTransfer = () => {
 //     };
 
 // }
-var index, table= document.getElementById('billl');
-    for(var i =1; i< table.rows.length; i++)
-{
-    table.rows[i].cells[7].onclick = function ()
-    {
-        index = this.parentNode.rowIndex;
-        table.deleteRow(index);
-        
-    };
+var table = document.getElementById('billl');
+for (var i = 1; i < table.rows.length; i++) {
+  table.rows[i].cells[5].onclick = function() {
+    var index = this.parentNode.rowIndex;
+    table.deleteRow(index);
+  };
 }
-
 let reportDescription = document.getElementById("reportDescription");
 let popupReport2 = document.getElementById("popupReport2")
 let report = document.getElementById("report");
