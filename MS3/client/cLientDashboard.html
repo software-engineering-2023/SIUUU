@@ -18,7 +18,7 @@
     <nav class="navbar sticky-top navbar-expand-lg navbar-custom bg-body-tertiary mb-5" style="padding: 1rem;">
         <div class="container-fluid" style="padding-left:0">
             <img src="logo.png" class="img-fluid" alt="Responsive image" width="150" height="auto">
-            <a class="navbar-brand" href="#">German National Bank</a>
+            <a class="navbar-brand" onclick="setActiveDiv('home')" href="#">German National Bank</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -27,10 +27,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav d-flex  align-items-center me-auto mb-2 mb-lg-0 w-100">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link font-weight-bold" onclick="openPopupReport()" href="#">Report an
+                            Issue</a>
+                        <div class="popup" id="report">
+                            <div class="close-btn" onclick="closePopupReport()">&times;</div>
+                            <h2>Type in Your Issue</h2>
+                            <div class="popup-element">
+                                <input type="text" id="reportDescription" placeholder="Description" />
+
+                            </div>
+                            <button type="submit" onclick="sendReport()">Send</button>
+                        </div>
+                        <div class="popup" id="popupReport2">
+                            <img src="tick.png">
+                            <h2>Thank you!</h2>
+                            <p>Your Issue is sent successfully and now under review!</p>
+                            <button type="button" onclick="closePopupReport2()">OK</button>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle font-weight-bold" href="#" role="button"
@@ -43,21 +56,19 @@
                             <li>
                                 <hr id="billsNot1" class="dropdown-divider ">
                             </li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li id="CCNot"><a class="dropdown-item" href="#">Your Credit Card has Just been
+                                    Approved!</a></li>
                             <li>
-                                <hr class="dropdown-divider">
+                                <hr id="CCDiv" class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here asdasda asdas da</a></li>
+                            <li><a class="dropdown-item" href="#">There is a new Transaction to McDonalds!</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item ml-auto">
-                        <div class="row align-items-center">
-                            <div class="col-8">
-                                <input class="form-control me-2 d-inline" type="search" placeholder="Search"
-                                    aria-label="Search">
-                            </div>
-                            <div class="col-3">
-                                <button class="btn btn-custom" type="submit">Search</button>
+                    <li class="nav-item ml-auto d-flex">
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <a class="nav-link" style="font-size: large; font-weight:800;"
+                                    onclick="setActiveDiv('aboutUs')" href="#">About us!</a>
                             </div>
                         </div>
                     </li>
@@ -120,11 +131,10 @@
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><a class="dropdown-item" href="#">Report</a></li>
                         <li><a class="dropdown-item" href="#">Profile</a></li>
-
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        <li><a class="dropdown-item" href="clientLogIn.html">Sign out</a></li>
                     </ul>
                 </div>
             </div>
@@ -356,7 +366,8 @@
                     <br>
                     <div class="input-box">
                         <label>Reason</label>
-                        <input type="text" id="reason" style="height: 20vh ; text-align:left; left:0; top:0"placeholder="Enter the reason for loan application" />
+                        <input type="text" id="reason" style="height: 20vh ; text-align:left; left:0; top:0"
+                            placeholder="Enter the reason for loan application" />
                         <div class="error"></div>
                     </div>
                     <div class="gender-box">
@@ -399,88 +410,89 @@
             </div>
             <div class="row">
                 <div class="col-12 p-2" style="margin-bottom:50px ;">
-                    <h2 class="text-left" style="text-decoration: underline;">Here are Your Credit Card Transactions:</h2>
+                    <h2 class="text-left" style="text-decoration: underline;">Here are Your Credit Card Transactions:
+                    </h2>
                 </div>
-            </div>  
-               <table>
+            </div>
+            <table>
                 <tr>
-                <td class="first-cell" style="font-weight: bold;">Transaction ID</td>
-                  <td style="font-weight: bold;" >Merchant Name</td>
-                  <td style="font-weight: bold;">Date</td>
-                  <td style="font-weight: bold;">Amount</td>
+                    <td class="first-cell" style="font-weight: bold;">Transaction ID</td>
+                    <td style="font-weight: bold;">Merchant Name</td>
+                    <td style="font-weight: bold;">Date</td>
+                    <td style="font-weight: bold;">Amount</td>
                 </tr>
                 <tr>
-                <td class="first-cell">20574</td>
-                  <td>McDonalds</td>
-                  <td>24/5/2023</td>
-                  <td>250 EGP</td>
+                    <td class="first-cell">20574</td>
+                    <td>McDonalds</td>
+                    <td>24/5/2023</td>
+                    <td>250 EGP</td>
                 </tr>
                 <tr>
-                 <td class="first-cell">21475</td>
-                  <td>Starbucks</td>
-                  <td>22/5/2023</td>
-                  <td>95 EGP</td>
+                    <td class="first-cell">21475</td>
+                    <td>Starbucks</td>
+                    <td>22/5/2023</td>
+                    <td>95 EGP</td>
                 </tr>
                 <tr>
                     <td class="first-cell">15786</td>
-                      <td>Circle K</td>
-                      <td>19/5/2023</td>
-                      <td>40 EGP</td>
+                    <td>Circle K</td>
+                    <td>19/5/2023</td>
+                    <td>40 EGP</td>
                 </tr>
-                 <tr>
+                <tr>
                     <td class="first-cell">18986</td>
-                      <td>Zara</td>
-                      <td>11/5/2023</td>
-                      <td>4350 EGP</td>
-              </tr>
+                    <td>Zara</td>
+                    <td>11/5/2023</td>
+                    <td>4350 EGP</td>
+                </tr>
                 <tr>
                     <td class="first-cell">54786</td>
-                      <td>KFC</td>
-                      <td>8/5/2023</td>
-                      <td>225 EGP</td>
+                    <td>KFC</td>
+                    <td>8/5/2023</td>
+                    <td>225 EGP</td>
                 </tr>
-    
-                
-              </table>
-              <br><br><br>
-              <div class="col-12 p-2" style="margin-bottom:50px ;">
-                <h2 class="text-left" style="text-decoration: underline;">Here are Your Bank Transactions:</h2>
-           
-              <table>
-                <tr>
-                    <td class="first-cell" style="font-weight: bold;">Transfer ID</td>
-                    <td style="font-weight: bold;">Type</td>
-                    <td style="font-weight: bold;">Amount</td>
-                    <td style="font-weight: bold;">Payment Date</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">78456</td>
-                    <td>Direct Transfer</td>
-                    <td>12000 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">15968</td>
-                    <td>Currency Exchange</td>
-                    <td>3600 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">12025</td>
-                    <td>Online Purchases</td>
-                    <td>4200 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">96573</td>
-                    <td>Charity Donations</td>
-                    <td>2800 EGP</td>
-                    <td>11/5/2023</td>
-                </tr>
-                
-                <br><br><br>
+
+
             </table>
-        </div>
+            <br><br><br>
+            <div class="col-12 p-2" style="margin-bottom:50px ;">
+                <h2 class="text-left" style="text-decoration: underline;">Here are Your Bank Transactions:</h2>
+
+                <table>
+                    <tr>
+                        <td class="first-cell" style="font-weight: bold;">Transfer ID</td>
+                        <td style="font-weight: bold;">Type</td>
+                        <td style="font-weight: bold;">Amount</td>
+                        <td style="font-weight: bold;">Payment Date</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">78456</td>
+                        <td>Direct Transfer</td>
+                        <td>12000 EGP</td>
+                        <td>24/5/2023</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">15968</td>
+                        <td>Currency Exchange</td>
+                        <td>3600 EGP</td>
+                        <td>24/5/2023</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">12025</td>
+                        <td>Online Purchases</td>
+                        <td>4200 EGP</td>
+                        <td>24/5/2023</td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">96573</td>
+                        <td>Charity Donations</td>
+                        <td>2800 EGP</td>
+                        <td>11/5/2023</td>
+                    </tr>
+
+                    <br><br><br>
+                </table>
+            </div>
         </div>
         <div class="col justify-content-start" id="bills" style="display:none">
             <div class="row">
@@ -513,21 +525,21 @@
                         <div class="close-btn" onclick="closePopupReminder()">&times;</div>
                         <h2>Set Reminder</h2>
                         <div class="row">
-                        <div class="popup-element">
-                            <input type="date" id="reminderDate" placeholder="date" min="2023-05-28"/>
-                            <input type="time" id="reminderTime" placeholder="time"/>
-                            
-                        </div>
+                            <div class="popup-element">
+                                <input type="date" id="reminderDate" placeholder="date" min="2023-05-28" />
+                                <input type="time" id="reminderTime" placeholder="time" />
+
+                            </div>
                         </div>
                         <button type="submit" id="send">Send</button>
                     </div>
                     <div class="popup" id="popup4">
-                        <img src="tick.png" >
+                        <img src="tick.png">
                         <h2>Thank you!</h2>
-                        <p>You will recieve a reminder on the chosen date.</p>  
-                        <button type="button" onclick="closePopup4()">OK</button>  
+                        <p>You will recieve a reminder on the chosen date.</p>
+                        <button type="button" onclick="closePopup4()">OK</button>
                     </div>
-            
+
                 </tr>
                 <tr>
                     <td class="first-cell">21475</td>
@@ -564,67 +576,67 @@
                     <td>10/6/2023</td>
                     <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
                     <td><button class="reminder-button" onclick="openCalendar()">Set Reminder</button></td>
-                  </tr>
+                </tr>
             </table>
-           
-            
-        </div>  
+        </div>
+
+
         <div class="col justify-content-start" id="transfer" style="display:none">
             <h3>Bank Transfers</h3>
             <section class="container-loan">
-            <form action="#" class="form" id="form2">
-                <br>
-                <div class="gender-option" id="transferType">
-                    
-                    <div class="gender">
-                        <input type="radio" id="check-internal" name="transfer" checked />
-                        <label for="check-internal">Internal</label>
+                <form action="#" class="form" id="form2">
+                    <br>
+                    <div class="gender-option" id="transferType">
+
+                        <div class="gender">
+                            <input type="radio" id="check-internal" name="transfer" checked />
+                            <label for="check-internal">Internal</label>
+
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-domestic" name="transfer" />
+                            <label for="check-domestic">Domestic</label>
+
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-international" name="transfer" />
+                            <label for="check-international">International</label>
+
+                        </div>
+
 
                     </div>
-                    <div class="gender">
-                        <input type="radio" id="check-domestic" name="transfer" />
-                        <label for="check-domestic">Domestic</label>
-                        
-                    </div>
-                    <div class="gender">
-                        <input type="radio" id="check-international" name="transfer" />
-                        <label for="check-international">International</label>
-                        
-                    </div>
-                    
-
-                </div>
-                <div class="input-box">
-                    <label>Account Number</label>
-                    <input type="text" id= "accountNumber" placeholder="Enter the Account Number" />
-                    <div class="error"></div>
-                </div>
-                <div class="input-box">
-                    <label>Recipient Bank Name</label>
-                    <input type="text" id="bankName"placeholder="Enter the Bank Name"  />
-                    <div class="error"></div>
-                </div>
-                <div class="input-box">
-                    <label>Recipient Account Number</label>
-                    <input type="number" id="recipientAccount" placeholder="Enter the Account Number"  />
-                    <div class="error"></div>
-                </div>
-                <div class="input-box">
-                    <label>Recipient Full Name</label>
-                    <input type="text" id="recipientName" placeholder="Enter the Receiver Name"  />
-                    <div class="error"></div>
-                </div>
-                <div class="column">
                     <div class="input-box">
-                        <label>Amount</label>
-                        <input type="number" id="amount" placeholder="00.00 EGP"  />
+                        <label>Account Number</label>
+                        <input type="text" id="accountNumber" placeholder="Enter the Account Number" />
                         <div class="error"></div>
                     </div>
+                    <div class="input-box">
+                        <label>Recipient Bank Name</label>
+                        <input type="text" id="bankName" placeholder="Enter the Bank Name" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-box">
+                        <label>Recipient Account Number</label>
+                        <input type="number" id="recipientAccount" placeholder="Enter the Account Number" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-box">
+                        <label>Recipient Full Name</label>
+                        <input type="text" id="recipientName" placeholder="Enter the Receiver Name" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="column">
+                        <div class="input-box">
+                            <label>Amount</label>
+                            <input type="number" id="amount" placeholder="00.00 EGP" />
+                            <div class="error"></div>
+                        </div>
 
-                </div>
-                <br>
-                <button>Submit</button>
-            </form>
+                    </div>
+                    <br>
+                    <button>Submit</button>
+                </form>
             </section>
             <div class="popup" id="popup2">
                 <img src="tick.png">
@@ -709,6 +721,108 @@
                     <p>you have redeemed points.</p>
                     <button type="button" onclick="closePopup3()">OK</button>
 
+                </div>
+            </section>
+        </div>
+
+
+        <div class="col justify-content-center" id="aboutUs" style="display:none;">
+            <section class="container-fluid px-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div id="headingGroup" class="text-white text-center d-none d-lg-block mt-5">
+                            <h1 class="" style="color:#2b5434; font-weight: 800;">
+                                German<span>/</span>National<span>/</span>Bank</h1>
+                            <h1 class="" style="color:#2b5434;font-weight: 800;">
+                                German<span>/</span>National<span>/</span>Bank</h1>
+                            <h1 class="" style="color:#2b5434;font-weight: 800;">
+                                German<span>/</span>National<span>/</span>Bank</h1>
+                            <h1 class="" style="color:#2b5434;font-weight: 800;">
+                                German<span>/</span>National<span>/</span>Bank</h1>
+                            <h1 class="" style="color:#2b5434;font-weight: 800;">
+                                German<span>/</span>National<span>/</span>Bank</h1>
+                            <h1 class="" style="color:#2b5434;font-weight: 800;">
+                                German<span>/</span>National<span>/</span>Bank</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid" src="Aboutus1.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="container-fluid px-0">
+                <div class="row align-items-center content">
+                    <div class="col-6">
+                        <img src="Aboutus2.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 text-center order-1 order-md-2">
+                        <div class="row justify-content-center">
+                            <div class="col-10 mt-3">
+                                <h2>German National Bank</h2>
+                                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste
+                                    molestiae
+                                    beatae, maiores deserunt
+                                    in voluptatibus
+                                    aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic
+                                    consequatur
+                                    repellat eveniet quidem
+                                    voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum
+                                    magnam
+                                    autem nam ex deserunt debitis
+                                    eaque ratione! Nobis, quidem assumenda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center content">
+                    <div class="col-md-6 text-center">
+                        <div class="row justify-content-center">
+                            <div class="col-10 mt-3">
+                                <h2>German National Bank</h2>
+                                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste
+                                    molestiae
+                                    beatae, maiores deserunt
+                                    in voluptatibus
+                                    aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic
+                                    consequatur
+                                    repellat eveniet quidem
+                                    voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum
+                                    magnam
+                                    autem nam ex deserunt debitis
+                                    eaque ratione! Nobis, quidem assumenda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row align-items-center content">
+                    <div class="col-md-6 order-2 order-md-1">
+                        <img src="" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 text-center order-1 order-md-2">
+                        <div class="row justify-content-center">
+                            <div class="col-10 mt-3">
+                                <h2>German National Bank</h2>
+                                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste
+                                    molestiae
+                                    beatae, maiores
+                                    deserunt
+                                    in voluptatibus
+                                    aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic
+                                    consequatur
+                                    repellat eveniet
+                                    quidem
+                                    voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum
+                                    magnam
+                                    autem nam ex deserunt
+                                    debitis
+                                    eaque ratione! Nobis, quidem assumenda.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
