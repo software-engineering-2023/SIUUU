@@ -64,6 +64,18 @@
                             </li>
                             <li><a class="dropdown-item" onclick="setActiveDiv('transaction'); this.style.display = 'none'; "
                                     href="#">There is a new Transaction to McDonalds!</a></li>
+
+                            <li>
+                                <hr id="CCDiv" class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" onclick="setActiveDiv('bills'); this.style.display = 'none'; "
+                                href="#">Reminder! Your credit card bill is due.</a></li>
+
+                            <li>
+                                <hr id="CCDiv" class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" onclick="setActiveDiv('bills'); this.style.display = 'none'; "
+                                href="#">Reminder! You have an upcoming loan payment!</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ml-auto d-flex">
@@ -701,10 +713,84 @@
                     </div>
                 </tr>
                 <tr>
+                    <td class="first-cell">521727</td>
+                    <td>Loan Payment</td>
+                    <td>2 Months</td>
+                    <td>100000 EGP</td>
+                    <td>24/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-standard" name="paymentBill3" checked />
+                            <label for="check-standard">Partially</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-extended" name="paymentBill3" />
+                            <label for="check-extended">Fully</label>
+                        </div>
+                    </div></td>
+                    <td><button class="reminder-button" onclick="openPopupReminder()">Set Reminder</button></td>
+                    <div class="popup" id="reminder">
+                        <div class="close-btn" onclick="closePopupReminder()">&times;</div>
+                        <h2>Set Reminder</h2>
+                        <div class="row">
+                        <div class="popup-element">
+                            <input type="date" id="reminderDate" placeholder="date" min="2023-05-28"/>
+                            <input type="time" id="reminderTime" placeholder="time"/>
+                            
+                        </div>
+                        </div>
+                        <button type="submit" id="send">Send</button>
+                    </div>
+                    <div class="popup" id="popup4">
+                        <img src="tick.png" >
+                        <h2>Thank you!</h2>
+                        <p>You will recieve a reminder on the chosen date.</p>  
+                        <button type="button" onclick="closePopup4()">OK</button>  
+                    </div>
+                </tr>
+                <tr>
                     <td class="first-cell">18986</td>
                     <td>Rent</td>
                     <td>6 Months</td>
                     <td>42000 EGP</td>
+                    <td>18/6/2023</td>
+                    <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
+                    <td><div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-standard" name="paymentBill4" checked />
+                            <label for="check-standard">Partially</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-extended" name="paymentBill4" />
+                            <label for="check-extended">Fully</label>
+                        </div>
+                    </div></td>
+                    <td><button  class="reminder-button" onclick="openPopupReminder()">Set Reminder</button></td>
+                    <div class="popup" id="reminder">
+                        <div class="close-btn" onclick="closePopupReminder()">&times;</div>
+                        <h2>Set Reminder</h2>
+                        <div class="row">
+                        <div class="popup-element">
+                            <input type="date" id="reminderDate" placeholder="date" min="2023-05-28"/>
+                            <input type="time" id="reminderTime" placeholder="time"/>
+                            
+                        </div>
+                        </div>
+                        <button type="submit" id="send">Send</button>
+                    </div>
+                    <div class="popup" id="popup4">
+                        <img src="tick.png" >
+                        <h2>Thank you!</h2>
+                        <p>You will recieve a reminder on the chosen date.</p>  
+                        <button type="button" onclick="closePopup4()">OK</button>  
+                    </div>
+                </tr>
+                <tr>
+                    <td class="first-cell">521891</td>
+                    <td>Credit Card Bill</td>
+                    <td>2 Months</td>
+                    <td>15000 EGP</td>
                     <td>18/6/2023</td>
                     <td><button class="pay-button" onclick="deleteRecord(this)">Pay Now</button></td>
                     <td><div class="gender-option">
@@ -843,41 +929,7 @@
                 <button type="button" onclick="closePopup2()">OK</button>
 
             </div>
-            <!-- </section> -->
-            <table>
-                <tr>
-                    <td class="first-cell" style="font-weight: bold;">Transfer ID</td>
-                    <td style="font-weight: bold;">Type</td>
-                    <td style="font-weight: bold;">Amount</td>
-                    <td style="font-weight: bold;">Payment Date</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">78456</td>
-                    <td>Direct Transfer</td>
-                    <td>12000 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">15968</td>
-                    <td>Currency Exchange</td>
-                    <td>3600 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">12025</td>
-                    <td>Online Purchases</td>
-                    <td>4200 EGP</td>
-                    <td>24/5/2023</td>
-                </tr>
-                <tr>
-                    <td class="first-cell">96573</td>
-                    <td>Charity Donations</td>
-                    <td>2800 EGP</td>
-                    <td>11/5/2023</td>
-                </tr>
-
-                <br><br><br>
-            </table>
+           
             <br><br><br>
             <br><br><br>
         </div>
@@ -888,12 +940,12 @@
                 <form action="#" id="form" class="form">
                     <div class="row">
                         <h3 class="col p-6 text p-1 m-2 text-wrap "
-                            style="border-radius: 10px; background:linear-gradient(#aadee9,#1c8499);font-weight: 800">
+                            style="border-radius: 10px; background:#aadee9;font-weight: 800">
                             Total
                             Reward Points 50
                         </h3>
                         <h3 class="col p-6 text p-1 m-2 text-wrap"
-                            style=" background: linear-gradient(#aadee9,#1c8499) ;font-weight: 800; border-radius: 10px; ">
+                            style=" background:#aadee9 ;font-weight: 800; border-radius: 10px; ">
                             Points Worth<br> $100
                         </h3>
                     </div>
