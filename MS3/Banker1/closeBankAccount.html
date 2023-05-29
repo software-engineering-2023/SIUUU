@@ -75,65 +75,24 @@
                 </div>
             </div>
         </div>
-        <div class="col justify-content-center" style="margin-top: 100px;">
-            <h1>Accept or Reject Credit cards!</h1>
-            <form>
-                <div class="my-div1">
-                    <label for="list">Card 1</label><br>
-                    <textarea id="list" name="list" rows="5" cols="40" readonly>
-                  client-Account:  123344444
-                  Account balance:123
-                  date of request:14/12/2022
-                    </textarea><br><br>
-                    <button onclick="all1()">Accept</button>
-                    <button onclick="all2()">Reject</button>
-                </div>
+        <div class="col " style="margin-top: 100px;">
+            <section class="container-loan">
+                <form action="#" class="form" id="closeAccount">
+                    <div class="input-box">
+                        <label>Customer ID</label>
+                        <input type="text" id="customerID" placeholder="Enter Customer ID" />
+                        <div class="error"></div>
 
-                <div class="my-div2">
-                    <label for="list">Card 2</label><br>
-                    <textarea id="list" name="list" rows="5" cols="40" readonly>
-
-                  client-Account:  123344444
-                  Account balance:123
-                  date of request:14/12/2022
-      
-                    </textarea><br><br>
-                    <button onclick="all3()">Accept</button>
-                    <button onclick="all4()">Reject</button>
-                </div>
-
-                <div class="my-div3">
-                    <label for="list">Card 3</label><br>
-                    <textarea id="list" name="list" rows="5" cols="40" readonly>
-
-                  client-Account:  123344444
-                  Account balance:123
-                  date of request:14/12/2022
-      
-                    </textarea><br><br>
-                    <button onclick='all5()'>Accept</button>
-                    <button onclick="all6()">Reject</button>
-                </div>
-            </form>
-            <div>
-                <button id="sendNotification" onclick="openPopupNotify()"> Send Notification </button>
-                <div class="popup" id="notificationForm">
-                    <h2>Type in a Notification</h2>
-                    <div class="popup-element"><input type="text" id="reportID" placeholder="Report ID"></div>
-                    <div class="popup-element"><input type="text" id="customerID" placeholder="Customer ID" /></div>
-                    <div class="popup-element"><input type="text" id="description" placeholder="Description" />
                     </div>
-                    <div><button onclick="openPopup1(), closePopupNotify()">Send</button></div>
-                </div>
-                <div class="popup" id="popup1">
-                    <img src="tick.png">
-                    <h2>Thank you!</h2>
-                    <p>Notification sent successfully!</p>
-                    <button type="button" onclick="closePopup1()">OK</button>
+                    <div class="input-box">
+                        <label>Account number</label>
+                        <input type="text" id="accountNumber" placeholder="Enter Account Number " />
+                        <div class="error"></div>
 
-
-                </div>
-            </div>
+                    </div>
+                    <button>Close Account</button>
+                </form>
+            </section>
         </div>
     </div>
 

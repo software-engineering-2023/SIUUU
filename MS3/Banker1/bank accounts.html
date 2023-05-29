@@ -8,33 +8,88 @@
 <body>
   <button onclick="backhome()">Home!</button>
 
+  <div class="row w-100" id="mainView">
+
+    <div class="col-2">
+      <div class="d-flex flex-column h-100 flex-shrink-0 p-3 sidebar justify-content-center">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        </a>
+        <ul class="nav nav-pills flex-column mb-auto justify-content" style="margin-top: 0;">
+          <!-- <li>
+                <a href="#" class="nav-link link-dark" id="homeButton">
+                    Home
+                </a>
+            </li> -->
+          <li>
+            <a href="#" class="nav-link link-dark" id="creditCardButton" onclick="opencredit()">
+              Manage Credit Cards
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark" id="loanButton" onclick='openloan()'>
+              Manage Loans
+            </a>
+          </li>
+          <!-- <li>
+                <a href="#" class="nav-link link-dark" id="transactionButton">
+                    View Customers
+                </a>
+            </li> -->
+          <li>
+            <a href="#" class="nav-link link-dark" id="billsButton" onclick="openacc()">
+              Open Bank Accounts
+            </a>
+
+          </li>
+
+          <li>
+            <a href="#" class="nav-link link-dark" id="transferButton" onclick="closeacc()">
+              Close Bank Accounts
+            </a>
 
 
+        </ul>
+        <div class="dropdown" style="padding-bottom: 4rem;">
+          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="User.png" alt="" width="50" height="50" class="rounded-circle me-2">
+            <strong id="nice1" style="padding: auto;">(mo)</strong>
+          </a>
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
 
-
-
-  <div class="notification-container">
-    <!-- <button id = "sendNotification" onclick="openPopupNotify()"> Open Bank Account </button> -->
-
-    <div class="popup" id="notificationForm">
-      <h2>Type in details
-      </h2>
-      <div class="popup-element"><input type="text" id="reportID" placeholder="Account number"></div>
-      <div class="popup-element"><input type="text" id="customerID" placeholder="Customer ID" /></div>
-      <div class="popup-element"><input type="text" id="description" placeholder="Account type" /></div>
-      <div class="popup-element"><input type="text" id="description" placeholder="Account Creation date" /></div>
-      <div class="popup-element"><input type="text" id="description" placeholder="Account status" /></div>
-
-      <div><button onclick="openPopup1(), closePopupNotify()">Send</button></div>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" onclick='signout()' href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="popup" id="popup1">
-      <img src="tick.png">
-      <h2>Thank you!</h2>
-      <p>Account Created!</p>
-      <button type="button" onclick="closePopup1(), backhome()">OK</button>
+
+
+    <div class="notification-container">
+      <!-- <button id = "sendNotification" onclick="openPopupNotify()"> Open Bank Account </button> -->
+
+      <div class="popup" id="notificationForm">
+        <h2>Type in details
+        </h2>
+        <div class="popup-element"><input type="text" id="reportID" placeholder="Account number"></div>
+        <div class="popup-element"><input type="text" id="customerID" placeholder="Customer ID" /></div>
+        <div class="popup-element"><input type="text" id="description" placeholder="Account type" /></div>
+        <div class="popup-element"><input type="text" id="description" placeholder="Account Creation date" /></div>
+        <div class="popup-element"><input type="text" id="description" placeholder="Account status" /></div>
+
+        <div><button onclick="openPopup1(), closePopupNotify()">Send</button></div>
+      </div>
+      <div class="popup" id="popup1">
+        <img src="tick.png">
+        <h2>Thank you!</h2>
+        <p>Account Created!</p>
+        <button type="button" onclick="closePopup1(), backhome()">OK</button>
+      </div>
     </div>
   </div>
-
 
   <script src="bank account.js"></script>
 </body>
