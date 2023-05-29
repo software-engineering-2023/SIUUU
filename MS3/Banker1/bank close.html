@@ -5,41 +5,68 @@
     <link rel="stylesheet" href="bank account.css">
   </head>
   <body>
-    <button onclick="backhome()">Home!</button>
+    <section class="container-loan">
+    <form action="#" class="form" id="closeAccount">
+    <div class="input-box">
+      <label>Customer ID</label>
+      <input type="text" id="customerID" placeholder="Enter Customer ID" />
+      <div class="error"></div>
+      
+  </div>
+  <div class="input-box">
+      <label>Account number</label>
+      <input type="text" id="accountNumber" placeholder="Enter Account Number " />
+      <div class="error"></div>
+     
+  </div>
+  <button>Close Account</button>
+</form></section>
+    <!-- <div class="col justify-content-start" id="transfer" style="display:none">
+      <h3>Bank Transfers</h3>
+      <section class="container-loan">
+          <form action="#" class="form" id="form2">
+              <br>
+              <div class="input-box">
+                  <label>Account Number</label>
+                  <input type="text" id="accountNumber" placeholder="Enter the Account Number" />
+                  
+              </div>
+              <div class="input-box">
+                  <label>Recipient Bank Name</label>
+                  <input type="text" id="bankName" placeholder="Enter the Bank Name" />
+                 
+              </div>
+              <div class="input-box">
+                  <label>Recipient Account Number</label>
+                  <input type="number" id="recipientAccount" placeholder="Enter the Account Number" />
+                  
+              </div>
+              <div class="input-box">
+                  <label>Recipient Full Name</label>
+                  <input type="text" id="recipientName" placeholder="Enter the Receiver Name" />
+                  
+              </div>
+              <div class="column">
+                  <div class="input-box">
+                      <label>Amount</label>
+                      <input type="number" id="amount" placeholder="00.00 EGP" />
+                      
+                  </div>
 
+              </div>
+              <br>
+              <button>Submit</button>
+          </form>
+      </section>
+      <div class="popup" id="popup2">
+          <img src="tick.png">
+          <h2>Transfer done successfully!</h2>
+          <p>You will receive a message shortly.</p>
+          <button type="button">OK</button>
 
+      </div>
 
-
-
-    <div class="panel" style="width:100%" ></div>
-<div class="notification-container">
-    <!-- <button id = "sendNotification" onclick="openPopupNotify()"> Close Bank Account </button> -->
-
-    <div class="popup" id="notificationForm">
-        <h2>Type in details
-        </h2>
-        <div class="popup-element"><input type="text" id="reportID" placeholder="Account number"></div>
-        <div class="popup-element"><input type="text" id="customerID" placeholder="Customer ID" /></div>
-
-        <div><button onclick="openPopup1(), closePopupNotify()">Send</button></div>
-    </div>
-     <div class="popup" id="popup1">
-        <img src="tick.png" >
-        <h2>Thank you!</h2>
-        <p>Account Closed!</p>  
-        <button type="button" onclick="closePopup1(), backhome()">OK</button>  
-    </div>
- </div>
-
-
-
-
-
-
-
-
-
-
+ -->
 
     <script src="bank account.js"></script>
   </body>

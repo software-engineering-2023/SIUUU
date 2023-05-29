@@ -191,18 +191,96 @@
                         <li>Card Number: 1212 1212 1212 1212</li>
                         <li>Expiration Date: 12/24</li>
                         <li>Cardholder Name: Amr </li>
-                        <button>Report</button>
+                        <br>
+                        <button onclick="openPopupCredit()">Report</button>
                     </ul>
+                    
+            <div class="popup" id="reportCredit">
+                <div class="close-btn" onclick="closePopupCredit()">&times;</div>
+                <h2>Report credit card</h2>
+                <div class="gender-option">
+                    <label style="font-weight: bolder;">Choose reason for replacement:</label>
+                    <div class="gender">
+                        <input type="radio" id="check-theft" name="reason" checked />
+                        <label for="check-theft">Theft</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-loss" name="reason" />
+                        <label for="check-loss">Loss</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-damage" name="reason" />
+                        <label for="check-damage">Damage</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-other" name="reason" />
+                        <label for="check-other">Other</label>
+                    </div>
+                </div>
+
+                <div class="popup-element">
+                    
+                    <input type="text" id="theft" placeholder="Please explain more what happened." required />
+
+                </div>
+
+                <button id="sendcreditReport" type="submit" onclick="sendcreditReport()">Apply for replacement</button>
+            </div>
+            <div class="popup" id="popup5">
+                <img src="tick.png">
+                <h2>Thank you!</h2>
+                <p>You will recieve a text message regarding all the replacement</p>
+                <button type="button" onclick="closePopup5()">OK</button>
+            </div>
                 </div>
                 <div class="card-container">
                     <h3>Credit Card Details</h3>
                     <ul>
                         <li>Card Type: Visa</li>
-                        <li>Card Number: 1234 4321 1234 4321</li>
-                        <li>Expiration Date: 12/25</li>
-                        <li>Cardholder Name: Amr</li>
-                        <button>Report</button>
+                        <li>Card Number: 2473 2838 2323 9873</li>
+                        <li>Expiration Date: 12/24</li>
+                        <li>Cardholder Name: Amr </li>
+                        <br>
+                        <button onclick="openPopupCredit()">Report</button>
                     </ul>
+                    
+            <div class="popup" id="reportCredit">
+                <div class="close-btn" onclick="closePopupCredit()">&times;</div>
+                <h2>Report credit card</h2>
+                <div class="gender-option">
+                    <label style="font-weight: bolder;">Choose reason for replacement:</label>
+                    <div class="gender">
+                        <input type="radio" id="check-theft" name="reason" checked />
+                        <label for="check-theft">Theft</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-loss" name="reason" />
+                        <label for="check-loss">Loss</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-damage" name="reason" />
+                        <label for="check-damage">Damage</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-other" name="reason" />
+                        <label for="check-other">Other</label>
+                    </div>
+                </div>
+
+                <div class="popup-element">
+                    
+                    <input type="text" id="theft" placeholder="Please explain more what happened." required />
+
+                </div>
+
+                <button id="sendcreditReport" type="submit" onclick="sendcreditReport()">Apply for replacement</button>
+            </div>
+            <div class="popup" id="popup5">
+                <img src="tick.png">
+                <h2>Thank you!</h2>
+                <p>You will recieve a text message regarding all the replacement</p>
+                <button type="button" onclick="closePopup5()">OK</button>
+            </div>
                 </div>
             </div>
             <div class="row">

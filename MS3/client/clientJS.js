@@ -674,3 +674,32 @@ function closePopupReport2() {
     popupReport2.classList.add("transition-effect");
 }
 
+
+let popup5 = document.getElementById("popup5"); //credit card popup
+
+function openPopup5() {
+    popup5.classList.add("open-popup");
+    theft.value="";
+    
+}
+function closePopup5() {
+    popup5.classList.remove("open-popup");
+
+}
+let reportCredit= document.getElementById('reportCredit');
+function openPopupCredit()
+{
+    reportCredit.classList.add("open-popup");
+}
+function closePopupCredit()
+{
+    reportCredit.classList.remove("open-popup");
+}
+let theft=document.getElementById('theft');
+function sendcreditReport() {
+    if (theft.value !== "") {
+            openPopup5();
+            closePopupCredit();
+        }
+    }
+
