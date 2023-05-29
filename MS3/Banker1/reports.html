@@ -2,146 +2,231 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="clientCSS.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(BankName)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="ClientCSS.css">
 </head>
-    <body>
-<div>
-    <main class="table">
-        <section class="table__header">
-            <h1>Technical Issues</h1>
-            <div class="input-group">
-                <input type="search" placeholder="Search Data...">
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-custom bg-body-tertiary mb-5" style="padding: 1rem;">
+        <div class="container-fluid" style="padding-left:0">
+            <img src="logo.png" class="img-fluid" alt="Responsive image" width="150" height="auto">
+            <a class="navbar-brand" href="#">German National Bank</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="row w-100" id="mainView">
+        <div class="col-2">
+            <div class="d-flex flex-column h-100 flex-shrink-0 p-3 sidebar justify-content-center">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                </a>
+                <ul class="nav nav-pills flex-column mb-auto justify-content" style="margin-top: 0;">
+                    <li>
+                        <a href="cLientDashboard.html" class="nav-link link-dark" id="homeButton">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="CC.html" class="nav-link link-dark" id="creditCardButton">
+                            Manage Credit Cards
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-dark" id="loanButton" onclick='openloan()'>
+                            Manage Loans
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#" class="nav-link link-dark" id="transactionButton">
+                            View Customers
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="openBankAccount.html" class="nav-link link-dark" id="billsButton">
+                            Open Bank Accounts
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="closeBankAccount.html" class="nav-link link-dark" id="transferButton"> Close Bank
+                            Accounts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html" class="nav-link link-dark" id="transferButton"> Reports
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="dropdown" style="padding-bottom: 4rem;">
+                    <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                        id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="User.png" alt="" width="50" height="50" class="rounded-circle me-2">
+                        <strong id="nice1" style="padding: auto;">(mo)</strong>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" onclick='signout()' href="#">Sign out</a></li>
+                    </ul>
+                </div>
             </div>
-        </section>
-        <section class="table__body">
-            <table id="table">
-                <thead>
+        </div>
 
-                    <th> Id <span class="icon-arrow">&UpArrow;</span></th>
-                    <th> Customer Id <span class="icon-arrow">&UpArrow;</span></th>
-                    <th> Description <span class="icon-arrow">&UpArrow;</span></th>
-                    <th> Date <span class="icon-arrow">&UpArrow;</span></th>
-                    <th> Resolve <span class="icon-arrow">&UpArrow;</span></th>
+        <div>
+            <main class="table" style="margin-top: 100px;">
+                <section class="table__header" >
+                    <h1>Technical Issues</h1>
+                    <div class="input-group">
+                        <input type="search" placeholder="Search Data...">
+                    </div>
+                </section>
+                <section class="table__body">
+                    <table id="table">
+                        <thead class="sticky-top">
+                            <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Customer Id <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Description <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Resolve <span class="icon-arrow">&UpArrow;</span></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 521890</td>
+                                <td> "I keep getting logged out from my account. I tried uninstalling and installing the
+                                    app
+                                    all over again but nothing" </td>
+                                <td> 31 Dec, 2022 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
 
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> 1 </td>
-                        <td> 521890</td>
-                        <td> "I keep getting logged out from my account. I tried uninstalling and installing the app
-                            all over again but nothing" </td>
-                        <td> 31 Dec, 2022 </td>
-                        <td>
-                            <button>Resolve</button>
-                        </td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td> 461891 </td>
+                                <td> "The view credit card transactions is not loading anything" </td>
+                                <td> 27 Aug, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> 3</td>
+                                <td> 491891 </td>
+                                <td> "Everytime I try to transfer money, it shows me a popup message that no internet
+                                    connection. I tried using cellular data" </td>
+                                <td> 14 Mar, 2023 </td>
 
-                    </tr>
-                    <tr>
-                        <td> 2 </td>
-                        <td> 461891 </td>
-                        <td> "The view credit card transactions is not loading anything" </td>
-                        <td> 27 Aug, 2023 </td>
-                        <td>
-                            <button>Resolve</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 3</td>
-                        <td> 491891 </td>
-                        <td> "Everytime I try to transfer money, it shows me a popup message that no internet
-                            connection. I tried using cellular data" </td>
-                        <td> 14 Mar, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> 4</td>
+                                <td> 551919 </td>
+                                <td> "I want to get a new password but i have forgotten my old one" </td>
+                                <td> 25 May, 2023 </td>
 
-                        <td>
-                            <button>Resolve</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 4</td>
-                        <td> 551919 </td>
-                        <td> "I want to get a new password but i have forgotten my old one" </td>
-                        <td> 25 May, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> 5</td>
+                                <td> 64123 </td>
+                                <td> "It takes forever to view my transactions" </td>
+                                <td> 23 Apr, 2023 </td>
 
-                        <td>
-                            <button>Resolve</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 5</td>
-                        <td> 64123 </td>
-                        <td> "It takes forever to view my transactions" </td>
-                        <td> 23 Apr, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
 
-                        <td>
-                            <button>Resolve</button>
-                        </td>
+                            </tr>
+                            <tr>
+                                <td> 6</td>
+                                <td>521891 </td>
+                                <td> "system keeps shutting down every two hours" </td>
+                                <td> 23 Apr, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> 7</td>
+                                <td>491981</td>
+                                <td> "my data disappeared" </td>
+                                <td> 20 May, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
 
-                    </tr>
-                    <tr>
-                        <td> 6</td>
-                        <td>521891 </td>
-                        <td> "system keeps shutting down every two hours" </td>
-                        <td> 23 Apr, 2023 </td>
-                        <td>
-                            <button>Resolve</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 7</td>
-                        <td>491981</td>
-                        <td> "my data disappeared" </td>
-                        <td> 20 May, 2023 </td>
-                        <td>
-                            <button>Resolve</button>
-                        </td>
+                            </tr>
+                            <tr>
+                                <td> 8</td>
+                                <td> 46781</td>
+                                <td> "I can't close my account please close it for me" </td>
+                                <td> 30 Feb, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
 
-                    </tr>
-                    <tr>
-                        <td> 8</td>
-                        <td> 46781</td>
-                        <td> "I can't close my account please close it for me" </td>
-                        <td> 30 Feb, 2023 </td>
-                        <td>
-                            <button>Resolve</button>
-                        </td>
+                            </tr>
+                            <tr>
+                                <td> 9</td>
+                                <td>461891</td>
+                                <td> ""system keeps shutting down every two hours"" </td>
+                                <td> 22 Dec, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
 
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td>461891</td>
-                        <td> ""system keeps shutting down every two hours"" </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <button>Resolve</button>
-                        </td>
+                            </tr>
+                            <tr>
+                                <td> 10</td>
+                                <td> 46781</td>
+                                <td> "I can't close my account please close it for me" </td>
+                                <td> 30 Feb, 2023 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
 
-                    </tr>
-                    <tr>
-                        <td> 10</td>
-                        <td> 46781</td>
-                        <td> "I can't close my account please close it for me" </td>
-                        <td> 30 Feb, 2023 </td>
-                        <td>
-                            <button>Resolve</button>
-                        </td>
+                            </tr>
+                            <tr>
+                                <td> 11 </td>
+                                <td> 521891</td>
+                                <td> "I keep getting logged out from my account. I tried uninstalling and installing the
+                                    app
+                                    all over again but nothing" </td>
+                                <td> 31 Dec, 2022 </td>
+                                <td>
+                                    <button>Resolve</button>
+                                </td>
 
-                    </tr>
-                    <tr>
-                        <td> 11 </td>
-                        <td> 521891</td>
-                        <td> "I keep getting logged out from my account. I tried uninstalling and installing the app
-                            all over again but nothing" </td>
-                        <td> 31 Dec, 2022 </td>
-                        <td>
-                            <button>Resolve</button>
-                        </td>
-
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-</div>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
 </body>
 <script defer src="client.js"></script>
 
