@@ -277,15 +277,21 @@ footer a {
 
 .navbar-custom .navbar-brand {
 	color: #eaefe2;
+	font-family: 'Montserrat', sans-serif;
+
 }
 
 .navbar-custom .nav-link {
 	color: #eaefe2;
+	font-family: 'Montserrat', sans-serif;
+
 }
 
 .navbar-custom .btn-custom {
 	background-color: #2b5434;
 	color: white;
+	font-family: 'Montserrat', sans-serif;
+
 }
 
 .navbar-custom .nav-link:hover {
@@ -306,10 +312,12 @@ footer a {
 
 .sidebar .nav-link {
 	color: black;
-	font-size: 1rem;
-	font-weight:600;
-	padding: 0rem;
+	font-weight:800;
+	font-size: large;
+	padding: 0.2rem;
 	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+
 }
 
 .sidebar .nav-link:hover {
@@ -610,4 +618,8 @@ thead th.asc span.icon-arrow{
 
 thead th.active,tbody td.active {
     color: #FF4A3B;
+}
+
+.nav-link{
+	color: #FF4A3B;
 }
