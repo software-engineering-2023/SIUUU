@@ -71,11 +71,10 @@
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
 
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" onclick='signout()' href="#">Sign out</a></li>
+                        <li><a class="dropdown-item" href="clientLogIn.html">Sign out</a></li>
                     </ul>
                 </div>
             </div>
@@ -164,8 +163,15 @@
                             </div>
                         </div>
                 </form>
-                <button>Open Account</button>
+                <button onclick="openPopup3()">Open Account</button>
             </section>
+            <div class="popup" id="popup3">
+                <img src="tick.png">
+                <h2>Bank account created successfully!</h2>
+                
+                <button type="button" onclick="closePopup3()">OK</button>
+
+            </div>
         </div>
     </div>
 
