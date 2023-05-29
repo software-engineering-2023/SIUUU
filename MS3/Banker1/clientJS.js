@@ -122,9 +122,12 @@ function setActiveDiv(divId) {
 
 
 // });
+const here= document.getElementById('here');
 function displayText() {
-    var text = document.getElementById("textField");
+    if(here.value!==''){
+    const text= document.getElementById('textField');
     text.style.display = "block";
+    }
 }
 let popup1 = document.getElementById("popup1"); //notification popup
 let popup2 = document.getElementById("popup2"); //announcement popup
@@ -193,6 +196,12 @@ acceptButtons.forEach(function(button) {
   });
 });
 
+function sendNotification() {
+    if (customerID.value !== "" && reportID.value !== "" && description.value !== "") {
+            openPopup1();
+            closePopupNotify();
+        }
+    }
 
 
 
