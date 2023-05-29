@@ -249,3 +249,9 @@ function sendNotification() {
 
 
 
+
+    function removeRow(button) {
+        // Get the parent row and remove it
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+    }

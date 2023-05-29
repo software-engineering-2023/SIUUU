@@ -111,7 +111,7 @@
                                     all over again but nothing" </td>
                                 <td> 31 Dec, 2022 </td>
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
 
                             </tr>
@@ -121,7 +121,7 @@
                                 <td> "The view credit card transactions is not loading anything" </td>
                                 <td> 27 Aug, 2023 </td>
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
                             </tr>
                             <tr>
@@ -132,7 +132,7 @@
                                 <td> 14 Mar, 2023 </td>
 
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
                             </tr>
                             <tr>
@@ -142,7 +142,7 @@
                                 <td> 25 May, 2023 </td>
 
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
                             </tr>
                             <tr>
@@ -152,7 +152,7 @@
                                 <td> 23 Apr, 2023 </td>
 
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
 
                             </tr>
@@ -162,7 +162,7 @@
                                 <td> "system keeps shutting down every two hours" </td>
                                 <td> 23 Apr, 2023 </td>
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
                             </tr>
                             <tr>
@@ -171,7 +171,7 @@
                                 <td> "my data disappeared" </td>
                                 <td> 20 May, 2023 </td>
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
 
                             </tr>
@@ -181,7 +181,7 @@
                                 <td> "I can't close my account please close it for me" </td>
                                 <td> 30 Feb, 2023 </td>
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
 
                             </tr>
@@ -191,7 +191,7 @@
                                 <td> ""system keeps shutting down every two hours"" </td>
                                 <td> 22 Dec, 2023 </td>
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
 
                             </tr>
@@ -201,7 +201,7 @@
                                 <td> "I can't close my account please close it for me" </td>
                                 <td> 30 Feb, 2023 </td>
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
 
                             </tr>
@@ -213,7 +213,7 @@
                                     all over again but nothing" </td>
                                 <td> 31 Dec, 2022 </td>
                                 <td>
-                                    <button>Resolve</button>
+                                    <button class="resolve-button" onclick="removeRow(this)">Resolve</button>
                                 </td>
 
                             </tr>
@@ -226,7 +226,14 @@
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
         </script>
+        
 </body>
 <script defer src="client.js"></script>
+<script>
+function removeRow(button) {
+    // Get the parent row and remove it
+    var row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}</script>
 
 </html>
