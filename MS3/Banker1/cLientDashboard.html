@@ -154,7 +154,7 @@
                     <h2 class="text-left">Search for Customers</h2>
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <input id="here" class="form-control me-2 d-inline" type="search" oninput='func()'
+                            <input id="here" type="number" class="form-control me-2 d-inline" type="search" oninput='func()'
                                 placeholder="please enter customers account number" aria-label="Search">
                         </div>
                         <button onclick="displayText()">Search</button>
@@ -168,23 +168,41 @@
                     </div>
                 </div>
             </div>
-            <div>
+            
 
-                <button id="sendNotification" onclick="openPopupNotify()"> Send Notification </button>
-                <div class="popup" id="notificationForm" style="margin-top: 200px; margin-left: -50px;">
-                    <h2>Type in a Notification</h2>
-                    <div class="popup-element"><input type="text" id="reportID" placeholder="Report ID"></div>
-                    <div class="popup-element"><input type="text" id="customerID" placeholder="Customer ID" /></div>
-                    <div class="popup-element"><input type="text" id="description" placeholder="Description" /></div>
-                    <div><button onclick="openPopup1(), closePopupNotify()">Send</button></div>
+                <div class="notification-container"style="margin-top: 90px;" id="form1">
+
+                    <button id="sendNotification" onclick="openPopupNotify()"> Send Notification </button>
+                    <div class="popup" id="notificationForm">
+                        <div class="close-btn" onclick="closePopupNotify()">&times;</div>
+                        <h2>Type in a Notification</h2>
+                        <div class="popup-element">
+                            <input type="number" id="reportID" placeholder="Report ID" required>
+        
+                        </div>
+        
+                        <div class="popup-element">
+        
+                            <input type="number" id="customerID" placeholder="Customer ID" required />
+        
+                        </div>
+        
+                        <div class="popup-element">
+        
+                            <input type="text" id="description" placeholder="Description" required />
+        
+                        </div>
+        
+                        <button id="sendButton" type="submit" onclick="sendNotification()">Send</button>
+                    </div>
+                    <div class="popup" id="popup1">
+                        <img src="tick.png">
+                        <h2>Thank you!</h2>
+                        <p>Notification sent successfully!</p>
+                        <button type="button" onclick="closePopup1()">OK</button>
+                    </div>
+            
                 </div>
-                <div class="popup" id="popup1">
-                    <img src="tick.png">
-                    <h2>Thank you!</h2>
-                    <p>Notification sent successfully!</p>
-                    <button type="button" onclick="closePopup1()">OK</button>
-
-
 
 
 
